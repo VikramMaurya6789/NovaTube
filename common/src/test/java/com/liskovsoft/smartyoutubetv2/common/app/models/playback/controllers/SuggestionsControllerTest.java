@@ -1,9 +1,9 @@
-package com.liskovsoft.smartyoutubetv2.common.app.models.playback.controllers;
+package com.novatube.common.app.models.playback.controllers;
 
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Playlist;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.SimpleMediaItem;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
+import com.novatube.common.app.models.data.Playlist;
+import com.novatube.common.app.models.data.SimpleMediaItem;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.views.PlaybackView;
 
 import org.junit.After;
 import org.junit.Before;

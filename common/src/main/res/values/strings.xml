@@ -324,6 +324,7 @@
     <string name="action_playback_queue">Playback queue</string>
     <string name="action_video_speed">Video speed</string>
     <string name="action_subtitles">Subtitles</string>
+    <string name="action_settings">Settings</string><!-- NovaTube: player settings gear -->
     <string name="action_like">Like</string>
     <string name="action_dislike">Dislike</string>
     <string name="action_play_pause">Play/Pause</string>
@@ -756,4 +757,11 @@
         <item quantity="one">%s second</item>
         <item quantity="other">%s seconds</item>
     </plurals>
+    <!-- NovaTube round2: compact player quick-settings popup -->
+    <string name="action_comment">Comments</string>
+    <string name="quick_settings_quality">Quality</string>
+    <string name="quick_settings_speed">Playback speed</string>
+    <string name="quick_settings_loop">Loop</string>
+    <string name="quick_settings_normal">Normal</string>
+    <string name="quick_settings_auto">Auto</string>
 </resources>

@@ -1,11 +1,11 @@
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.prefs.common.DataSaverBase$$ExternalSyntheticLambda0 {
+-keepclassmembers class com.novatube.common.prefs.common.DataSaverBase$$ExternalSyntheticLambda0 {
     <init>(...);
 }
--keep class com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter
+-keep class com.novatube.common.app.presenters.PlaybackPresenter
 -keepclassmembers class io.reactivex.internal.operators.observable.ObservableFlatMap$MergeObserver {
     <init>(io.reactivex.Observer, io.reactivex.functions.Function, boolean, int, int);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.main.SplashActivity {
+-keepclassmembers class com.novatube.tv.ui.main.SplashActivity {
     <init>(...);
 }
 -keep class kotlin.ranges.RangesKt___RangesKt
@@ -13,7 +13,7 @@
 -keep class kotlin.collections.builders.MapBuilder$Companion
 -keep class org.conscrypt.Conscrypt$Version
 -keep class kotlinx.coroutines.ExecutorCoroutineDispatcher
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.browse.BrowseActivity {
+-keepclassmembers class com.novatube.tv.ui.browse.BrowseActivity {
     <init>(...);
     public void onCreate(android.os.Bundle);
 }
@@ -50,7 +50,7 @@
     <init>(...);
     android.graphics.LinearGradient mLowFadeShader;
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.MultipleRowsFragment$ItemViewClickedListener {
+-keepclassmembers class com.novatube.tv.ui.browse.video.MultipleRowsFragment$ItemViewClickedListener {
     <init>(...);
 }
 -keepclassmembers class com.liskovsoft.youtubeapi.common.helpers.PostDataHelper {
@@ -80,21 +80,21 @@
 -keepclassmembers class com.liskovsoft.youtubeapi.service.YouTubeServiceManager {
     <init>(...);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.widgets.vineyard.TagCardView {
+-keepclassmembers class com.novatube.tv.ui.widgets.vineyard.TagCardView {
     <init>(...);
     android.widget.TextView mTagNameText;
     android.widget.ImageView mResultImage;
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextviewcompat.MarqueeTextViewCompat {
+-keepclassmembers class com.novatube.tv.ui.widgets.marqueetextviewcompat.MarqueeTextViewCompat {
     <init>(...);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.widgets.complexcardview.ComplexImageView {
+-keepclassmembers class com.novatube.tv.ui.widgets.complexcardview.ComplexImageView {
     <init>(...);
     android.widget.ProgressBar mProgressBar;
     android.view.ViewGroup mProgressContainer;
     android.widget.FrameLayout mPreviewContainer;
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.widgets.time.DateTimeView {
+-keepclassmembers class com.novatube.tv.ui.widgets.time.DateTimeView {
     <init>(...);
     boolean mIsDateEnabled;
     boolean mIsTimeEnabled;
@@ -112,16 +112,16 @@
 -keepclassmembers class androidx.work.impl.constraints.trackers.Trackers {
     <init>(...);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.ProgressBarManager {
+-keepclassmembers class com.novatube.tv.ui.mod.leanback.misc.ProgressBarManager {
     <init>(...);
     android.view.View mProgressBarView;
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity {
+-keepclassmembers class com.novatube.common.misc.MotherActivity {
     <init>(...);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.misc.TickleManager {
+-keepclassmembers class com.novatube.common.misc.TickleManager {
     <init>(...);
-    com.liskovsoft.smartyoutubetv2.common.misc.TickleManager sInstance;
+    com.novatube.common.misc.TickleManager sInstance;
 }
 -keepclassmembers class androidx.core.content.FileProvider {
     <init>(...);
@@ -147,7 +147,7 @@
     <init>(...);
 }
 # NoSuchMethodError: android.graphics.Canvas.drawCircle
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.SeekBar {
+-keepclassmembers class com.novatube.tv.ui.mod.leanback.misc.SeekBar {
     <init>(...);
     void onDraw(android.graphics.Canvas);
     int mKnobx;
@@ -160,14 +160,14 @@
 #    <init>(...);
 #    void setNestedScrollingEnabled(boolean);
 #}
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.utils.Utils {
-    boolean isFormatSupported(com.liskovsoft.smartyoutubetv2.common.exoplayer.selector.track.MediaTrack);
+-keepclassmembers class com.novatube.common.utils.Utils {
+    boolean isFormatSupported(com.novatube.common.exoplayer.selector.track.MediaTrack);
     boolean skipCronet();
 }
 -keepclassmembers class com.google.android.exoplayer2.video.VideoRendererEventListener {
     void onVideoDisabled(com.google.android.exoplayer2.decoder.DecoderCounters);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.app.models.search.MediaServiceSearchTagProvider {
+-keepclassmembers class com.novatube.common.app.models.search.MediaServiceSearchTagProvider {
     <init>(...);
     boolean mIgnoreEmptyQuery;
     com.liskovsoft.mediaserviceinterfaces.ContentService mContentService;
@@ -180,10 +180,10 @@
     androidx.leanback.widget.VerticalGridView mVerticalGridView;
     androidx.leanback.widget.VerticalGridView getVerticalGridView();
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.app.models.playback.controllers.VideoStateController {
+-keepclassmembers class com.novatube.common.app.models.playback.controllers.VideoStateController {
     <init>(...);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.tv.ui.browse.BrowseSectionFragmentFactory {
+-keepclassmembers class com.novatube.tv.ui.browse.BrowseSectionFragmentFactory {
     <init>(...);
 }
 -keepclassmembers class androidx.room.RoomDatabase {
@@ -198,7 +198,7 @@
     <init>(...);
     void setZ(float);
 }
--keepclassmembers class com.liskovsoft.smartyoutubetv2.common.exoplayer.controller.ExoPlayerController {
+-keepclassmembers class com.novatube.common.exoplayer.controller.ExoPlayerController {
     <init>(...);
     boolean containsMedia();
 }
@@ -226,7 +226,7 @@
 #-keep class com.google.gson.internal.bind.TypeAdapters$7 { *; }
 #-keep class com.google.gson.internal.bind.TypeAdapters { *; }
 #-keep class androidx.leanback.widget.ItemAlignmentFacet$ItemAlignmentDef { *; }
-#-keep class com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.OptionCategory { *; }
+#-keep class com.novatube.common.app.models.playback.ui.OptionCategory { *; }
 #-keep class com.liskovsoft.leanbackassistant.channels.UpdateChannelsReceiver { *; }
 #-keep class androidx.core.view.ViewCompat { *; }
 #-keep class androidx.work.impl.WorkManagerInitializer { *; }
@@ -242,13 +242,13 @@
 #-keep class androidx.room.** { *; }
 
 # NOTE: Stable/Beta: VirusTotal (Google: Detected, Ikarus: Trojan.AndroidOS.Agent)
-#-keep class com.liskovsoft.smartyoutubetv2.tv.ui.main.MainApplication { *; }
-#-keep class com.liskovsoft.smartyoutubetv2.common.app.models.playback.controllers.AutoFrameRateController { *; }
-#-keep class com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData { *; }
-#-keep class com.liskovsoft.smartyoutubetv2.common.app.presenters.ChannelUploadsPresenter { *; }
+#-keep class com.novatube.tv.ui.main.MainApplication { *; }
+#-keep class com.novatube.common.app.models.playback.controllers.AutoFrameRateController { *; }
+#-keep class com.novatube.common.prefs.MainUIData { *; }
+#-keep class com.novatube.common.app.presenters.ChannelUploadsPresenter { *; }
 
 # NOTE: Fdroid: VirusTotal (Google: Detected, Ikarus: Trojan.AndroidOS.Agent)
-#-keep class com.liskovsoft.smartyoutubetv2.common.app.presenters.dialogs.menu.providers.ContextMenuProvider { *; }
+#-keep class com.novatube.common.app.presenters.dialogs.menu.providers.ContextMenuProvider { *; }
 #-keep class com.google.android.exoplayer2.util.Util { *; }
 #-keep class com.bumptech.glide.request.RequestOptions { *; }
-#-keep class com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tooltips.TooltipCompatHandler { *; }
+#-keep class com.novatube.tv.ui.mod.leanback.playerglue.tooltips.TooltipCompatHandler { *; }

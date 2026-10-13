@@ -567,10 +567,14 @@ public class BrowseSupportFragment extends BaseSupportFragment {
 
     private boolean createMainFragment(ObjectAdapter adapter, int position) {
         Object item = null;
-        if (!mCanShowHeaders) {
-            // when header is disabled, we can decide to use RowsSupportFragment even no data.
-        } else if (adapter == null || adapter.size() == 0) {
-            return false;
+        if (adapter == null || adapter.size() == 0) {
+            if (mCanShowHeaders) {
+                return false;
+            }
+            // MOD (NovaTube round2): when header is disabled and there's no data,
+            // fall back to RowsSupportFragment (item stays null).
+            // When the adapter HAS data, resolve the item below so PageRow-based
+            // section switching keeps working with HEADERS_DISABLED.
         } else {
             if (position < 0) {
                 position = 0;
@@ -583,7 +587,9 @@ public class BrowseSupportFragment extends BaseSupportFragment {
 
         boolean oldIsPageRow = mIsPageRow;
         Object oldPageRow = mPageRow;
-        mIsPageRow = mCanShowHeaders && item instanceof PageRow;
+        // MOD (NovaTube round2): treat PageRow items as page rows even when headers are
+        // disabled, so section fragment swapping behaves exactly like HEADERS_ENABLED.
+        mIsPageRow = item instanceof PageRow;
         mPageRow = mIsPageRow ? item : null;
         boolean swap;
 

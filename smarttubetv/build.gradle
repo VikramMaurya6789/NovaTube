@@ -30,9 +30,9 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
+// NovaTube: no Firebase — google-services.json removed, plugins never applied.
 // The first letter of the flavor name must be in uppercase
-if (new File("${projectDir}/google-services.json").exists() && (getGradle().getStartParameter().getTaskRequests().toString().contains("Stbeta") ||
-        getGradle().getStartParameter().getTaskRequests().toString().contains("Ststable"))) {
+if (false && new File("${projectDir}/google-services.json").exists() && (getGradle().getStartParameter().getTaskRequests().toString().contains("Novatube"))) {
     // Google Services Gradle plugin (transforms google-services.json file)
     apply plugin: 'com.google.gms.google-services'
 
@@ -54,7 +54,7 @@ android {
     
     defaultConfig {
         // values linked with applicationId: searchable.searchSuggestAuthority, searchable.searchSuggestIntentData, VideoContract.CONTENT_AUTHORITY
-        applicationId "app.smarttube"
+        applicationId "com.novatube.tv"
         minSdkVersion project.properties.minSdkVersion
         targetSdkVersion project.properties.targetSdkVersion
         versionCode 2457
@@ -123,8 +123,8 @@ android {
     // https://stackoverflow.com/questions/18332474/how-to-set-versionname-in-apk-filename-using-gradle
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            def project = "SmartTube"
-            def flavor = variant.productFlavors[-1].name.substring(2) // remove st prefix
+            def project = "NovaTube"
+            def flavor = variant.productFlavors[-1].name // single flavor: novatube
             def buildType = variant.buildType.name.take(1)
             def version = variant.versionName
             def arch = output.getFilter(com.android.build.OutputFile.ABI)
@@ -150,7 +150,7 @@ android {
 
     lintOptions {
         abortOnError true
-        //checkReleaseBuilds false // fix for ClassNotFoundException: com.android.tools.lint.client.api.Vendor
+        checkReleaseBuilds false // NovaTube: skip lint on release (memory-constrained VM)
     }
 
     // gradle 4.6 migration: disable dimensions mechanism
@@ -158,24 +158,11 @@ android {
     flavorDimensions "default"
 
     // NOTE: The main goal of prefixing a flavor is to group flavors' folders together
+    // NovaTube: single flavor (was stbeta/ststable/stfdroid).
     productFlavors {
-        stbeta {
-            applicationId "org.smarttube.beta"
+        novatube {
+            applicationId "com.novatube.tv"
             targetSdkVersion project.properties.compileSdkVersion
-        }
-        ststable {
-            applicationId "org.smarttube.stable"
-            targetSdkVersion project.properties.compileSdkVersion
-        }
-        stfdroid {
-            applicationId "app.smarttube.fdroid"
-            minSdkVersion 21
-            targetSdkVersion project.properties.compileSdkVersion
-
-            // The content of Universal apk
-            ndk {
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
-            }
         }
     }
 }
@@ -236,15 +223,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:' + rxAndroidVersion
     implementation 'io.reactivex.rxjava2:rxjava:' + rxJavaVersion
 
-    // Add the Firebase Crashlytics SDK.
-
-    stbetaImplementation('com.google.firebase:firebase-crashlytics:' + firebaseCrashlyticsVersion) {
-        transitive = true
-    }
-
-    ststableImplementation('com.google.firebase:firebase-crashlytics:' + firebaseCrashlyticsVersion) {
-        transitive = true
-    }
+    // NovaTube: Firebase Crashlytics removed (no Firebase in this fork).
 
     // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
 

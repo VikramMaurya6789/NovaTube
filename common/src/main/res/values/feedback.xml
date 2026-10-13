@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- NovaTube: upstream community links (this fork has no own channels yet) -->
     <string-array name="feedback">
-        <item>Telegram|https://t.me/SmartTubeEN</item>
-        <item>Discord|https://discord.gg/Wt8HDDej5z</item>
-        <!--<item>Email|firsthash@gmail.com</item>-->
+        <item>Upstream: SmartTube on GitHub|https://github.com/yuliskov/SmartTube</item>
     </string-array>
 </resources>

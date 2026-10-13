@@ -22,6 +22,9 @@
     <item name="action_flip" type="id"/>
     <item name="action_screen_dimming" type="id"/>
     <item name="action_afr" type="id"/>
+    <item name="action_settings" type="id" /><!-- NovaTube: player settings gear -->
+    <!-- NovaTube round2: comments button (reuses action_chat behavior) -->
+    <item name="action_comment" type="id" />
     <item name="channel_new_content" type="id"/>
     <item name="linkify_click_handler" type="id"/>
 </resources>

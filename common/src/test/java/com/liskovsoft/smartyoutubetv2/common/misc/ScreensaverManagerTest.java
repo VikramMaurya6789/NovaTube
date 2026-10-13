@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.common.misc;
+package com.novatube.common.misc;
 
 import android.app.Activity;
 import android.os.Looper;
@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.WindowManager.LayoutParams;
 
 import com.liskovsoft.sharedutils.misc.WeakHashSet;
-import com.liskovsoft.smartyoutubetv2.common.R;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
+import com.novatube.common.R;
+import com.novatube.common.prefs.GeneralData;
+import com.novatube.common.prefs.PlayerTweaksData;
+import com.novatube.common.utils.Utils;
 
 import org.junit.After;
 import org.junit.Before;

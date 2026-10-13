@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.liskovsoft.smartyoutubetv2.tv">
+          package="com.novatube.tv">
 
     <!-- Shield on Android 11 speech recognizer not working fix? -->
     <!-- https://stackoverflow.com/questions/64319117/speechrecognizer-not-available-when-targeting-android-11 -->
@@ -45,7 +45,7 @@
     <!-- android:usesCleartextTraffic - allow HTTP traffic -->
     <!-- Alt cleartext options: https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted -->
     <application
-        android:name="com.liskovsoft.smartyoutubetv2.tv.ui.main.MainApplication"
+        android:name="com.novatube.tv.ui.main.MainApplication"
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:allowAudioPlaybackCapture="true"
@@ -67,7 +67,7 @@
         <!-- This activity's name used inside atv channels -->
         <!-- More info: com.liskovsoft.leanbackassistant.utils.AppUtil -->
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.main.SplashActivity"
+            android:name="com.novatube.tv.ui.main.SplashActivity"
             android:exported="true"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
@@ -119,10 +119,10 @@
         <!-- Alt app launcher icon -->
         <activity-alias android:label="@string/app_name"
                         android:icon="@mipmap/app_icon_alt"
-                        android:name="com.liskovsoft.smartyoutubetv2.tv.ui.main.SplashActivityAlt"
+                        android:name="com.novatube.tv.ui.main.SplashActivityAlt"
                         android:exported="true"
                         android:enabled="false"
-                        android:targetActivity="com.liskovsoft.smartyoutubetv2.tv.ui.main.SplashActivity">
+                        android:targetActivity="com.novatube.tv.ui.main.SplashActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.MAIN" />
@@ -134,7 +134,7 @@
         <!-- noHistory is essential for dialogs. Because otherwise you'll see previous dialog content when opening. -->
         <!-- screenOrientation="behind" is important too. This fix crashes on Android 8 (api 26) and above, except few devices. -->
         <!-- More info about behind: https://stackoverflow.com/a/52426009/1279056 -->
-        <activity android:name="com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.AppDialogActivity"
+        <activity android:name="com.novatube.tv.ui.dialogs.AppDialogActivity"
                   android:noHistory="true"
                   android:excludeFromRecents="true"
                   android:launchMode="singleInstance"
@@ -143,7 +143,7 @@
                   android:theme="@style/App.Theme.Leanback.Preferences"/>
 
         <!-- Android 8 fallback -->
-        <activity android:name="com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.AppDialogActivityOpaque"
+        <activity android:name="com.novatube.tv.ui.dialogs.AppDialogActivityOpaque"
             android:noHistory="true"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
@@ -152,19 +152,19 @@
             android:theme="@style/App.Theme.Leanback.Preferences.Opaque"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.browse.BrowseActivity"
+            android:name="com.novatube.tv.ui.browse.BrowseActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.channel.ChannelActivity"
+            android:name="com.novatube.tv.ui.channel.ChannelActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.channeluploads.ChannelUploadsActivity"
+            android:name="com.novatube.tv.ui.channeluploads.ChannelUploadsActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
@@ -172,7 +172,7 @@
         <!-- Remove to fix Sony wake up bug? android:turnScreenOn="true" -->
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.playback.PlaybackActivity"
+            android:name="com.novatube.tv.ui.playback.PlaybackActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:supportsPictureInPicture="true"
@@ -182,25 +182,25 @@
             android:theme="@style/App.Theme.Leanback.Player"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.search.tags.SearchTagsActivity"
+            android:name="com.novatube.tv.ui.search.tags.SearchTagsActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
 
-        <activity android:name="com.liskovsoft.smartyoutubetv2.tv.ui.signin.SignInActivity"
+        <activity android:name="com.novatube.tv.ui.signin.SignInActivity"
                   android:launchMode="singleInstance"
                   android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
                   android:screenOrientation="unspecified"
                   android:theme="@style/App.Theme.Leanback.GuidedStep"/>
 
-        <activity android:name="com.liskovsoft.smartyoutubetv2.tv.ui.adddevice.AddDeviceActivity"
+        <activity android:name="com.novatube.tv.ui.adddevice.AddDeviceActivity"
                   android:launchMode="singleInstance"
                   android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
                   android:screenOrientation="unspecified"
                   android:theme="@style/App.Theme.Leanback.GuidedStep"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.ui.webbrowser.WebBrowserActivity"
+            android:name="com.novatube.tv.ui.webbrowser.WebBrowserActivity"
             android:launchMode="singleInstance"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:screenOrientation="unspecified"/>
@@ -208,7 +208,7 @@
         <!-- BEGIN Launchers (used inside tvQuickActions. Don't rename them or move!) -->
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.HomeLauncherActivity"
+            android:name="com.novatube.tv.launchers.HomeLauncherActivity"
             android:logo="@drawable/icon_home"
             android:icon="@drawable/icon_home"
             android:label="@string/header_home"
@@ -218,7 +218,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.NewsLauncherActivity"
+            android:name="com.novatube.tv.launchers.NewsLauncherActivity"
             android:logo="@drawable/icon_news"
             android:icon="@drawable/icon_news"
             android:label="@string/header_news"
@@ -228,7 +228,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.MusicLauncherActivity"
+            android:name="com.novatube.tv.launchers.MusicLauncherActivity"
             android:logo="@drawable/icon_music"
             android:icon="@drawable/icon_music"
             android:label="@string/header_music"
@@ -238,7 +238,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.GamesLauncherActivity"
+            android:name="com.novatube.tv.launchers.GamesLauncherActivity"
             android:logo="@drawable/icon_gaming"
             android:icon="@drawable/icon_gaming"
             android:label="@string/header_gaming"
@@ -248,7 +248,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.ChannelsLauncherActivity"
+            android:name="com.novatube.tv.launchers.ChannelsLauncherActivity"
             android:logo="@drawable/icon_channels"
             android:icon="@drawable/icon_channels"
             android:label="@string/header_channels"
@@ -258,7 +258,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.SubscriptionsLauncherActivity"
+            android:name="com.novatube.tv.launchers.SubscriptionsLauncherActivity"
             android:logo="@drawable/icon_subscriptions"
             android:icon="@drawable/icon_subscriptions"
             android:label="@string/header_subscriptions"
@@ -268,7 +268,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.HistoryLauncherActivity"
+            android:name="com.novatube.tv.launchers.HistoryLauncherActivity"
             android:logo="@drawable/icon_history"
             android:icon="@drawable/icon_history"
             android:label="@string/header_history"
@@ -278,7 +278,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.PlaylistsLauncherActivity"
+            android:name="com.novatube.tv.launchers.PlaylistsLauncherActivity"
             android:logo="@drawable/icon_playlist"
             android:icon="@drawable/icon_playlist"
             android:label="@string/header_playlists"
@@ -288,7 +288,7 @@
             android:screenOrientation="unspecified"/>
 
         <activity
-            android:name="com.liskovsoft.smartyoutubetv2.tv.launchers.SearchLauncherActivity"
+            android:name="com.novatube.tv.launchers.SearchLauncherActivity"
             android:logo="@drawable/action_search"
             android:icon="@drawable/action_search"
             android:label="@string/action_search"

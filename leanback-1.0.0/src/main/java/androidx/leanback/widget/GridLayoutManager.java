@@ -2315,7 +2315,7 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
                     // NullPointerException: Attempt to invoke virtual method 'android.content.res.StringBlock.get(int)' on a null object reference
                     // InflateException: Binary XML file line #60: Binary XML file line #60: Error inflating class <unknown>
                     // IllegalStateException: Layout state should be one of 100, but it is 10 (Chromecast with Android 14)
-                    // ClassCastException: android.widget.RelativeLayout cannot be cast to com.liskovsoft.smartyoutubetv2.tv.ui.widgets.vineyard.TagCardView
+                    // ClassCastException: android.widget.RelativeLayout cannot be cast to com.novatube.tv.ui.widgets.vineyard.TagCardView
                     e.printStackTrace();
                 }
             }
