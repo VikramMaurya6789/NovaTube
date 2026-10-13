@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.util;
+package com.novatube.tv.util;
 
 import android.content.Context;
 

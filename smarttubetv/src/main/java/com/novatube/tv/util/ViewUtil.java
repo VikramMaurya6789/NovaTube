@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.util;
+package com.novatube.tv.util;
 
 import android.content.Context;
 import android.graphics.ColorMatrix;
@@ -22,11 +22,11 @@ import androidx.leanback.widget.VerticalGridView;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.adapter.VideoGroupObjectAdapter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextview.MarqueeTextView;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextviewcompat.MarqueeTextViewCompat;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.speedmarquee.SpeedMarquee;
+import com.novatube.tv.R;
+import com.novatube.tv.adapter.VideoGroupObjectAdapter;
+import com.novatube.tv.ui.widgets.marqueetextview.MarqueeTextView;
+import com.novatube.tv.ui.widgets.marqueetextviewcompat.MarqueeTextViewCompat;
+import com.novatube.tv.ui.widgets.speedmarquee.SpeedMarquee;
 
 public class ViewUtil {
     /**

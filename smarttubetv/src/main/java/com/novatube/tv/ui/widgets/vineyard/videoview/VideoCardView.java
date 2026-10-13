@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.vineyard.videoview;
+package com.novatube.tv.ui.widgets.vineyard.videoview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.leanback.widget.BaseCardView;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.util.vineyard.NetworkUtil;
+import com.novatube.tv.R;
+import com.novatube.tv.util.vineyard.NetworkUtil;
 
 public class VideoCardView extends BaseCardView {
     public static final int CARD_TYPE_FLAG_IMAGE_ONLY = 0;

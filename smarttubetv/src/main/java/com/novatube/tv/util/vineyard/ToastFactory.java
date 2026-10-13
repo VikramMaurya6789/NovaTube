@@ -1,8 +1,8 @@
-package com.liskovsoft.smartyoutubetv2.tv.util.vineyard;
+package com.novatube.tv.util.vineyard;
 
 import android.content.Context;
 import android.widget.Toast;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class ToastFactory {
     public static Toast createWifiErrorToast(Context context) {

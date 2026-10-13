@@ -1,11 +1,11 @@
-package com.liskovsoft.smartyoutubetv2.tv.util;
+package com.novatube.tv.util;
 
 import android.view.KeyEvent;
 
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
+import com.novatube.common.app.presenters.PlaybackPresenter;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.utils.Utils;
 
 public class LongPressHandler {
     // Long press handler

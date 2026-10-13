@@ -1,5 +1,6 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#EEEEEE"/>
+    <!-- NovaTube: dark search field (official YT TV style) -->
+    <solid android:color="#212121"/>
 
     <corners android:radius="30dp"/>
 

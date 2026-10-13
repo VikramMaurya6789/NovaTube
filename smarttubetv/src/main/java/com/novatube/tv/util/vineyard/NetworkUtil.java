@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.util.vineyard;
+package com.novatube.tv.util.vineyard;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
