@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse.dialog;
+package com.novatube.tv.ui.browse.dialog;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.leanback.app.BrowseSupportFragment;
 import androidx.leanback.app.BrowseSupportFragment.MainFragmentAdapter;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.errors.CategoryEmptyError;
-import com.liskovsoft.smartyoutubetv2.common.app.models.errors.ErrorFragmentData;
-import com.liskovsoft.smartyoutubetv2.common.app.models.errors.SignInError;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.fragments.ErrorSupportFragment;
+import com.novatube.common.app.models.errors.CategoryEmptyError;
+import com.novatube.common.app.models.errors.ErrorFragmentData;
+import com.novatube.common.app.models.errors.SignInError;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.mod.fragments.ErrorSupportFragment;
 
 public class ErrorDialogFragment extends ErrorSupportFragment implements BrowseSupportFragment.MainFragmentAdapterProvider {
     private static final boolean TRANSLUCENT = true;

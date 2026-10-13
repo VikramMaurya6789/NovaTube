@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse.video;
+package com.novatube.tv.ui.browse.video;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -18,21 +18,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.VideoGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.interfaces.VideoGroupPresenter;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.adapter.VideoGroupObjectAdapter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.ChannelHeaderPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.ChannelHeaderPresenter.ChannelHeaderCallback;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.ShortsCardPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.VideoCardPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.CustomListRowPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.base.OnItemLongPressedListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.interfaces.VideoSection;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.LeanbackActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.UriBackgroundManager;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.models.data.VideoGroup;
+import com.novatube.common.app.presenters.interfaces.VideoGroupPresenter;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.adapter.VideoGroupObjectAdapter;
+import com.novatube.tv.presenter.ChannelHeaderPresenter;
+import com.novatube.tv.presenter.ChannelHeaderPresenter.ChannelHeaderCallback;
+import com.novatube.tv.presenter.ShortsCardPresenter;
+import com.novatube.tv.presenter.VideoCardPresenter;
+import com.novatube.tv.presenter.CustomListRowPresenter;
+import com.novatube.tv.presenter.base.OnItemLongPressedListener;
+import com.novatube.tv.ui.browse.interfaces.VideoSection;
+import com.novatube.tv.ui.common.LeanbackActivity;
+import com.novatube.tv.ui.common.UriBackgroundManager;
+import com.novatube.tv.util.ViewUtil;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

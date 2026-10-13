@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse.video;
+package com.novatube.tv.ui.browse.video;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -9,11 +9,11 @@ import android.util.Pair;
 import android.view.WindowManager;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.VideoGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ViewManager;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.adapter.VideoGroupObjectAdapter;
+import com.novatube.common.app.models.data.VideoGroup;
+import com.novatube.common.app.views.ViewManager;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.R;
+import com.novatube.tv.adapter.VideoGroupObjectAdapter;
 
 import java.util.HashMap;
 import java.util.Map;
