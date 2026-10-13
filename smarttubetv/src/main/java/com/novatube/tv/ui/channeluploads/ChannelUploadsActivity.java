@@ -1,8 +1,8 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.channeluploads;
+package com.novatube.tv.ui.channeluploads;
 
 import android.os.Bundle;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.LeanbackActivity;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.common.LeanbackActivity;
 
 public class ChannelUploadsActivity extends LeanbackActivity {
     private static final String TAG = ChannelUploadsActivity.class.getSimpleName();

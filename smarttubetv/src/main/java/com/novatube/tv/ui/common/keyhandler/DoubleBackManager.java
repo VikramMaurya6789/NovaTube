@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.common.keyhandler;
+package com.novatube.tv.ui.common.keyhandler;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -6,7 +6,7 @@ import android.view.KeyEvent;
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class DoubleBackManager {
     private static final String TAG = DoubleBackManager.class.getSimpleName();

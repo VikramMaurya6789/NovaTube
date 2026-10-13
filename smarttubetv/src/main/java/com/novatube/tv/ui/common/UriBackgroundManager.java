@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.common;
+package com.novatube.tv.ui.common;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -15,9 +15,9 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.tv.R;
+import com.novatube.tv.util.ViewUtil;
 
 public class UriBackgroundManager {
     private static final String TAG = UriBackgroundManager.class.getSimpleName();

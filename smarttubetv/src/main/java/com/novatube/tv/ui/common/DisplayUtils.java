@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.common;
+package com.novatube.tv.ui.common;
 
 import android.app.Activity;
 import android.content.Context;

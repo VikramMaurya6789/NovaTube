@@ -1,20 +1,20 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.common;
+package com.novatube.tv.ui.common;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SearchPresenter;
-import com.liskovsoft.smartyoutubetv2.common.autoframerate.ModeSyncManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.GlobalKeyTranslator;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
-import com.liskovsoft.smartyoutubetv2.common.misc.PlayerKeyTranslator;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.keyhandler.DoubleBackManager2;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.PlaybackActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.search.tags.SearchTagsActivity;
+import com.novatube.common.app.presenters.SearchPresenter;
+import com.novatube.common.autoframerate.ModeSyncManager;
+import com.novatube.common.misc.GlobalKeyTranslator;
+import com.novatube.common.misc.MotherActivity;
+import com.novatube.common.misc.PlayerKeyTranslator;
+import com.novatube.common.prefs.GeneralData;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.ui.common.keyhandler.DoubleBackManager2;
+import com.novatube.tv.ui.playback.PlaybackActivity;
+import com.novatube.tv.ui.search.tags.SearchTagsActivity;
 
 /**
  * This parent class contains common methods that run in every activity such as search.

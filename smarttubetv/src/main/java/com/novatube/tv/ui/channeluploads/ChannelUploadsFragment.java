@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.channeluploads;
+package com.novatube.tv.ui.channeluploads;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,11 +6,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.leanback.widget.VerticalGridView;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.ChannelUploadsPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.interfaces.VideoGroupPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ChannelUploadsView;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.VideoGridFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.ProgressBarManager;
+import com.novatube.common.app.presenters.ChannelUploadsPresenter;
+import com.novatube.common.app.presenters.interfaces.VideoGroupPresenter;
+import com.novatube.common.app.views.ChannelUploadsView;
+import com.novatube.tv.ui.browse.video.VideoGridFragment;
+import com.novatube.tv.ui.mod.leanback.misc.ProgressBarManager;
 
 public class ChannelUploadsFragment extends VideoGridFragment implements ChannelUploadsView {
     private static final String SELECTED_ITEM_INDEX = "SelectedItemIndex";
