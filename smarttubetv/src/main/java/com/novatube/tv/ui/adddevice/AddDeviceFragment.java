@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.adddevice;
+package com.novatube.tv.ui.adddevice;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -7,9 +7,9 @@ import androidx.annotation.Nullable;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.AddDevicePresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.AddDeviceView;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.common.app.presenters.AddDevicePresenter;
+import com.novatube.common.app.views.AddDeviceView;
+import com.novatube.tv.R;
 
 import java.util.List;
 

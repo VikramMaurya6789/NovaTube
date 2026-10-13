@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse;
+package com.novatube.tv.ui.browse;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -22,22 +22,23 @@ import androidx.leanback.widget.Presenter;
 import androidx.leanback.widget.PresenterSelector;
 import androidx.leanback.widget.TitleHelper;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.BrowseSection;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.SettingsGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.VideoGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.models.errors.ErrorFragmentData;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.BrowsePresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SearchPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SplashPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.BrowseView;
-import com.liskovsoft.smartyoutubetv2.common.misc.CrashRestorer;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.IconHeaderItemPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.dialog.ErrorDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.headers.ExtendedHeadersSupportFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.ProgressBarManager;
+import com.novatube.common.app.models.data.BrowseSection;
+import com.novatube.common.app.models.data.SettingsGroup;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.models.data.VideoGroup;
+import com.novatube.common.app.models.errors.ErrorFragmentData;
+import com.novatube.common.app.presenters.BrowsePresenter;
+import com.novatube.common.app.presenters.SearchPresenter;
+import com.novatube.common.app.presenters.SplashPresenter;
+import com.novatube.common.app.views.BrowseView;
+import com.novatube.common.misc.CrashRestorer;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.presenter.IconHeaderItemPresenter;
+import com.novatube.tv.ui.browse.dialog.ErrorDialogFragment;
+import com.novatube.tv.ui.browse.rail.NavRailView;
+import com.novatube.tv.ui.mod.leanback.headers.ExtendedHeadersSupportFragment;
+import com.novatube.tv.ui.mod.leanback.misc.ProgressBarManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -56,6 +57,8 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
     private boolean mIsFragmentCreated;
     private boolean mFocusOnContent;
     private CrashRestorer mCrashRestorer;
+    // NovaTube round2: official-style left navigation rail (replaces Leanback headers)
+    private NavRailView mNavRail;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -107,6 +110,8 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
 
         prepareEntranceTransition();
 
+        setupNavRail();
+
         mBrowsePresenter.onViewInitialized();
 
         // Restore state after crash
@@ -155,6 +160,7 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
                 (row) -> {
                     focusOnContentIfNeeded();
                     mBrowsePresenter.onSectionFocused(getSelectedHeaderId());
+                    syncRailWithPresenter();
                 }
         );
 
@@ -185,8 +191,9 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
             return;
         }
 
-        setHeadersState(HEADERS_ENABLED);
-        setHeadersTransitionOnBackEnabled(true);
+        // NovaTube round2: Leanback left-headers replaced by the NavRailView (see fragment_main.xml)
+        setHeadersState(HEADERS_DISABLED);
+        setHeadersTransitionOnBackEnabled(false);
 
         int brandColorRes = Helpers.getThemeAttr(getContext(), R.attr.brandColor);
         int brandAccentColorRes = Helpers.getThemeAttr(getContext(), R.attr.brandAccentColor);
@@ -338,6 +345,41 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
             // Need select again if current header is removed previously (can't check for it right now)
             // Fallback to the last section if index above size
             setSelectedPosition(index < mSectionRowAdapter.size() ? index : mSectionRowAdapter.size() - 1, false);
+
+            syncRailWithPresenter();
+        }
+    }
+
+    /**
+     * NovaTube round2: grabs the NavRailView from the activity layout (fragment_main.xml).
+     * Must run before BrowsePresenter.onViewInitialized() so the initial section syncs the rail.
+     */
+    private void setupNavRail() {
+        if (getActivity() == null) {
+            return;
+        }
+
+        mNavRail = getActivity().findViewById(R.id.nav_rail);
+
+        // NovaTube round2: never leave the browse screen without a focused view
+        // (D-pad dead-end guard). If nothing grabbed focus by the time the first
+        // frame is laid out, focus the rail's active item.
+        if (mNavRail != null) {
+            mNavRail.post(() -> {
+                if (getActivity() != null && mNavRail != null
+                        && getActivity().getCurrentFocus() == null) {
+                    mNavRail.focusActiveItem();
+                }
+            });
+        }
+    }
+
+    /**
+     * NovaTube round2: keeps the rail's checked highlight in sync with the shown section.
+     */
+    private void syncRailWithPresenter() {
+        if (mNavRail != null) {
+            mNavRail.syncWithPresenter();
         }
     }
 
@@ -442,6 +484,7 @@ public class BrowseFragment extends BrowseSupportFragment implements BrowseView 
     @Override
     public void onDestroyView() {
         mSectionFragmentFactory.cleanup();
+        mNavRail = null;
 
         super.onDestroyView();
     }

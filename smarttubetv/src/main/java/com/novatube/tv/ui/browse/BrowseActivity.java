@@ -1,11 +1,11 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse;
+package com.novatube.tv.ui.browse;
 
 import android.os.Bundle;
 
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.LeanbackActivity;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.common.LeanbackActivity;
 
 public class BrowseActivity extends LeanbackActivity {
     private static final String TAG = BrowseActivity.class.getSimpleName();

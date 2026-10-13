@@ -1,25 +1,25 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.browse;
+package com.novatube.tv.ui.browse;
 
 import androidx.fragment.app.Fragment;
 import androidx.leanback.app.BrowseSupportFragment;
 import androidx.leanback.widget.HeaderItem;
 import androidx.leanback.widget.Row;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.BrowseSection;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.SettingsGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.VideoGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.models.errors.ErrorFragmentData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.dialog.ErrorDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.interfaces.Section;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.interfaces.SettingsSection;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.interfaces.VideoSection;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.settings.SettingsGridFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.MultiVideoGridFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.ShortsGridFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.VideoGridFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.VideoRowsFragment;
+import com.novatube.common.app.models.data.BrowseSection;
+import com.novatube.common.app.models.data.SettingsGroup;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.models.data.VideoGroup;
+import com.novatube.common.app.models.errors.ErrorFragmentData;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.ui.browse.dialog.ErrorDialogFragment;
+import com.novatube.tv.ui.browse.interfaces.Section;
+import com.novatube.tv.ui.browse.interfaces.SettingsSection;
+import com.novatube.tv.ui.browse.interfaces.VideoSection;
+import com.novatube.tv.ui.browse.settings.SettingsGridFragment;
+import com.novatube.tv.ui.browse.video.MultiVideoGridFragment;
+import com.novatube.tv.ui.browse.video.ShortsGridFragment;
+import com.novatube.tv.ui.browse.video.VideoGridFragment;
+import com.novatube.tv.ui.browse.video.VideoRowsFragment;
 
 public class BrowseSectionFragmentFactory extends BrowseSupportFragment.FragmentFactory<Fragment> {
     private static final String TAG = BrowseSectionFragmentFactory.class.getSimpleName();
