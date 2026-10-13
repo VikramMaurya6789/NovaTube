@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NovaTube round2: left segment of the like/dislike/comment/save pill -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/nt_pill_fill_focused" />
+            <corners android:topLeftRadius="@dimen/nt_pill_corner_radius"
+                android:bottomLeftRadius="@dimen/nt_pill_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/nt_pill_fill" />
+            <corners android:topLeftRadius="@dimen/nt_pill_corner_radius"
+                android:bottomLeftRadius="@dimen/nt_pill_corner_radius" />
+        </shape>
+    </item>
+</selector>

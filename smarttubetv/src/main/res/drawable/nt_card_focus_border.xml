@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NovaTube round2: prominent white focus border around the 16:9 thumbnail -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#00000000" />
+    <stroke android:width="@dimen/nt_card_focus_border_width" android:color="@color/nt_card_focus_border" />
+    <corners android:radius="@dimen/nt_card_corner_radius" />
+</shape>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NovaTube round2: left-cluster player button - icon + text label (official YT TV style).
+     The root view carries @id/button so ControlButtonPresenter attaches click/focus to it.
+     Background is assigned in code per action (channel / Description / Subscribe). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="48dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="18dp"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

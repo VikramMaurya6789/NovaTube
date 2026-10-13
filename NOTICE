@@ -1,0 +1,15 @@
+NovaTube
+========
+
+NovaTube is a fork of SmartTube (https://github.com/yuliskov/SmartTube)
+by yuliskov, used under the terms of the MIT License (see LICENSE).
+
+Modifications in this fork:
+- Rebranded to NovaTube (package com.novatube.tv, new icon and accent color)
+- UI restyled toward the official YouTube TV look
+- In-app updater disabled (no longer checks SmartTube's GitHub releases)
+- Donation / feedback links removed
+
+All media-engine code (MediaServiceCore, SharedModules, ExoPlayer, Leanback)
+is the original work of the SmartTube contributors. Thank you to yuliskov
+and the SmartTube community.

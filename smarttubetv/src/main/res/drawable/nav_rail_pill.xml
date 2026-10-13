@@ -1,0 +1,6 @@
+<!-- NovaTube round2: focused rail item pill -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/nav_rail_pill" />
+    <corners android:radius="@dimen/nav_rail_pill_radius" />
+</shape>
