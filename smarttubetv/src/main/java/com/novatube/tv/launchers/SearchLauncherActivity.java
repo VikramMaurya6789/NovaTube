@@ -1,8 +1,8 @@
-package com.liskovsoft.smartyoutubetv2.tv.launchers;
+package com.novatube.tv.launchers;
 
 import android.os.Bundle;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SearchPresenter;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
+import com.novatube.common.app.presenters.SearchPresenter;
+import com.novatube.common.misc.MotherActivity;
 
 public class SearchLauncherActivity extends MotherActivity {
     @Override

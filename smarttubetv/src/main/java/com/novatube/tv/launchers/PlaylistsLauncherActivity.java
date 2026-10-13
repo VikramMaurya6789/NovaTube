@@ -1,9 +1,9 @@
-package com.liskovsoft.smartyoutubetv2.tv.launchers;
+package com.novatube.tv.launchers;
 
 import android.os.Bundle;
 import com.liskovsoft.mediaserviceinterfaces.data.MediaGroup;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.BrowsePresenter;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
+import com.novatube.common.app.presenters.BrowsePresenter;
+import com.novatube.common.misc.MotherActivity;
 
 public class PlaylistsLauncherActivity extends MotherActivity {
     @Override
