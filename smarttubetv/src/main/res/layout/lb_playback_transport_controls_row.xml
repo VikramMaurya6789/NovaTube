@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- MOD: intention to replace class name with custom one -->
+<!-- NovaTube round2: official YT TV layout - title top-left, thin red scrubber,
+     all controls BELOW the progress bar in three clusters:
+     LEFT (channel + Description + Subscribe) / CENTER (prev/play/next) / RIGHT (pill + CC + settings) -->
 
 <!-- Note: clipChildren/clipToPadding false are needed to apply shadows to child
      views with no padding of their own. Also to allow for negative margin on description. -->
@@ -42,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:clipToPadding="false"
+                android:focusable="false"
                 android:gravity="bottom" />
         </LinearLayout>
         <LinearLayout
@@ -52,7 +56,7 @@
             android:layout_gravity="bottom"
             android:orientation="vertical"
             android:layout_marginBottom="@dimen/lb_playback_transport_thumbs_bottom_margin" >
-            <com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.seekpreview.ThumbsBar
+            <com.novatube.tv.ui.mod.leanback.playerglue.seekpreview.ThumbsBar
                 android:id="@+id/thumbs_row"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -68,7 +72,7 @@
         </LinearLayout>
     </FrameLayout>
 
-    <com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowView
+    <com.novatube.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/transport_row"
@@ -85,29 +89,11 @@
                       android:focusable="true"
                       android:layout_height="1dp"/>
 
-        <!-- Original top player row -->
-        <!--
-        <FrameLayout
-            android:id="@+id/controls_dock"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layoutDirection="ltr"
-            android:layout_marginLeft="@dimen/lb_playback_transport_controlbar_margin_start"
-        />
-        -->
-
+        <!-- NovaTube round2: quality info + clock stay top-right, above the scrubber -->
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="ltr"
-                        android:layout_marginLeft="@dimen/lb_playback_transport_controlbar_margin_start"
                         tools:ignore="RtlHardcoded" >
-
-            <FrameLayout
-                android:id="@+id/controls_dock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-            />
 
             <RelativeLayout android:id="@+id/additional_info"
                             android:layout_width="wrap_content"
@@ -123,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     style="?attr/playbackControlsTimeStyle" />
-                <com.liskovsoft.smartyoutubetv2.tv.ui.widgets.time.DateTimeView
+                <com.novatube.tv.ui.widgets.time.DateTimeView
                     android:id="@+id/date_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,25 +119,19 @@
             </RelativeLayout>
         </RelativeLayout>
 
-        <com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.SeekBar
+        <!-- Thin YouTube-red scrubber -->
+        <com.novatube.tv.ui.mod.leanback.misc.SeekBar
             android:id="@+id/playback_progress"
             android:layout_width="match_parent"
             android:layout_height="@dimen/lb_playback_transport_progressbar_height"
             android:focusable="true"
             android:focusableInTouchMode="true" />
 
+        <!-- Elapsed / total time, right-aligned under the scrubber -->
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layoutDirection="ltr"
-                        android:layout_marginLeft="@dimen/lb_playback_transport_controlbar_margin_start"
                         tools:ignore="RtlHardcoded" >
-            <FrameLayout
-                android:id="@+id/secondary_controls_dock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true" >
-            </FrameLayout>
-
             <RelativeLayout android:id="@+id/time_info"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -202,6 +182,39 @@
             </RelativeLayout>
         </RelativeLayout>
 
+        <!-- NovaTube round2: three control clusters, all BELOW the progress bar.
+             LEFT: channel + Description + Subscribe | CENTER: prev/play/next | RIGHT: pill + CC + settings -->
+        <LinearLayout
+            android:id="@+id/controls_clusters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="@dimen/nt_player_cluster_spacing" >
 
-    </com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowView>
+            <FrameLayout
+                android:id="@+id/left_controls_dock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <FrameLayout
+                android:id="@+id/controls_dock"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:id="@+id/secondary_controls_dock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </com.novatube.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowView>
 </LinearLayout>

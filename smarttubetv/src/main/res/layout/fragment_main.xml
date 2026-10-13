@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_frame"
-    android:name="com.liskovsoft.smartyoutubetv2.tv.ui.browse.BrowseFragment"
+<!-- NovaTube round2: browse screen with official-YouTube-TV-style left navigation rail.
+     The rail is a focusable sibling of the browse fragment so D-pad Left/Right
+     moves between the rail and the content rows. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <com.novatube.tv.ui.browse.rail.NavRailView
+        android:id="@+id/nav_rail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/shelf_background_dark" />
+
+    <fragment
+        android:id="@+id/main_frame"
+        android:name="com.novatube.tv.ui.browse.BrowseFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
