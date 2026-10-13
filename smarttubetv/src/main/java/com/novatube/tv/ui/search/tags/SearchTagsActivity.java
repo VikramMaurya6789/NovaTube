@@ -1,9 +1,9 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.search.tags;
+package com.novatube.tv.ui.search.tags;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.LeanbackActivity;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.common.LeanbackActivity;
 
 public class SearchTagsActivity extends LeanbackActivity {
     private SearchTagsFragment mFragment;

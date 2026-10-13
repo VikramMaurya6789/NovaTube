@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.other;
+package com.novatube.tv.ui.playback.other;
 
 import android.os.Bundle;
 import android.os.ResultReceiver;

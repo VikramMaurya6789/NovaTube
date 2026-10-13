@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.other;
+package com.novatube.tv.ui.playback.other;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
@@ -21,39 +21,42 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.MaxControlsVideoPlayerGlue;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.widget.OnActionLongClickedListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.AFRAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ActionHelpers;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ChannelAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ChatAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ClosedCaptioningAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ContentBlockAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.FlipAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.HighQualityAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.RotateAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ScreenDimmingAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.SeekIntervalAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ShareAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.SoundOffAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.VideoInfoAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.PipAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.PlaybackQueueAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.PlaylistAddAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.PlaybackModeAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.SearchAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.SubscribeAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.TwoStateAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ThumbsDownAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.ThumbsUpAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.VideoSpeedAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.VideoStatsAction;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions.VideoZoomAction;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.prefs.GeneralData;
+import com.novatube.common.prefs.PlayerTweaksData;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.MaxControlsVideoPlayerGlue;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter;
+import com.novatube.tv.ui.mod.leanback.widget.OnActionLongClickedListener;
+import com.novatube.tv.ui.playback.actions.AFRAction;
+import com.novatube.tv.ui.playback.actions.ActionHelpers;
+import com.novatube.tv.ui.playback.actions.ChannelAction;
+import com.novatube.tv.ui.playback.actions.ClosedCaptioningAction;
+import com.novatube.tv.ui.playback.actions.CommentAction;
+import com.novatube.tv.ui.playback.actions.ContentBlockAction;
+import com.novatube.tv.ui.playback.actions.FlipAction;
+import com.novatube.tv.ui.playback.actions.HighQualityAction;
+import com.novatube.tv.ui.playback.actions.RotateAction;
+import com.novatube.tv.ui.playback.actions.ScreenDimmingAction;
+import com.novatube.tv.ui.playback.actions.SeekIntervalAction;
+import com.novatube.tv.ui.playback.actions.ShareAction;
+import com.novatube.tv.ui.playback.actions.SoundOffAction;
+import com.novatube.tv.ui.playback.actions.VideoInfoAction;
+import com.novatube.tv.ui.playback.actions.PipAction;
+import com.novatube.tv.ui.playback.actions.PlaybackQueueAction;
+import com.novatube.tv.ui.playback.actions.PlaylistAddAction;
+import com.novatube.tv.ui.playback.actions.PlaybackModeAction;
+import com.novatube.tv.ui.playback.actions.SearchAction;
+import com.novatube.tv.ui.playback.actions.SettingsAction;
+import com.novatube.tv.ui.playback.actions.SubscribeAction;
+import com.novatube.tv.ui.playback.actions.TwoStateAction;
+import com.novatube.tv.ui.playback.actions.ThumbsDownAction;
+import com.novatube.tv.ui.playback.actions.ThumbsUpAction;
+import com.novatube.tv.ui.playback.actions.VideoSpeedAction;
+import com.novatube.tv.ui.playback.actions.VideoStatsAction;
+import com.novatube.tv.ui.playback.actions.VideoZoomAction;
+import com.novatube.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.prefs.PlayerData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -84,6 +87,7 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
     private final PlaybackControlsRow.FastForwardAction mFastForwardAction;
     private final PlaybackControlsRow.RewindAction mRewindAction;
     private final Map<Integer, Action> mActions = new HashMap<>();
+    private final ArrayObjectAdapter mLeftActionsAdapter;
     private final OnActionClickedListener mActionListener;
     private final PlayerTweaksData mPlayerTweaksData;
     private final GeneralData mGeneralData;
@@ -125,7 +129,6 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         putAction(new PipAction(context));
         putAction(new AFRAction(context));
         putAction(new ScreenDimmingAction(context));
-        putAction(new ChatAction(context));
         putAction(new PlaybackQueueAction(context));
         putAction(new ContentBlockAction(context));
         putAction(new ShareAction(context));
@@ -134,25 +137,87 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         putAction(new RotateAction(context));
         putAction(new FlipAction(context));
         putAction(new SoundOffAction(context));
+        putAction(new SettingsAction(context)); // NovaTube: settings gear
+        putAction(new CommentAction(context)); // NovaTube round2: comments button in the right pill
+
+        // NovaTube round2: left cluster adapter (channel + Description + Subscribe)
+        mLeftActionsAdapter = new ArrayObjectAdapter(
+                new com.novatube.tv.ui.mod.leanback.playerglue.tooltips.ControlButtonPresenterSelector(
+                        PlayerData.instance(context).isTooltipsEnabled()));
+        onCreateLeftActions(mLeftActionsAdapter);
+    }
+
+    /**
+     * NovaTube round2: official YT TV left cluster - channel icon + name,
+     * Description button, Subscribe button (always visible, white high-contrast).
+     */
+    protected void onCreateLeftActions(ArrayObjectAdapter adapter) {
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_OPEN_CHANNEL)) {
+            adapter.add(mActions.get(R.id.action_channel));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_INFO)) {
+            adapter.add(mActions.get(R.id.action_info));
+        }
+        // Subscribe is always visible (official YT TV style)
+        adapter.add(mActions.get(R.id.action_subscribe));
+    }
+
+    /**
+     * NovaTube round2: adapter for the left control cluster, bound by
+     * PlaybackTransportRowPresenter to the left dock below the progress bar.
+     */
+    public ArrayObjectAdapter getLeftActionsAdapter() {
+        return mLeftActionsAdapter;
     }
 
     @Override
     protected void onCreatePrimaryActions(ArrayObjectAdapter adapter) {
-        // Order matters, super.onCreatePrimaryActions() will create the play / pause action.
-        // Will display as follows:
-        // play/pause, previous, rewind, fast forward, next
-        //   > /||      |<        <<        >>         >|
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PLAY_PAUSE)) {
-            super.onCreatePrimaryActions(adapter);
-        }
-
+        // NovaTube round2: official YT TV center cluster - Previous / Play-Pause / Next.
+        // (super.onCreatePrimaryActions() creates the play / pause action.)
+        // Remaining actions moved to the secondary (right cluster) row.
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PREVIOUS)) {
             adapter.add(mSkipPreviousAction);
         }
-        //adapter.add(mRewindAction);
-        //adapter.add(mFastForwardAction);
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PLAY_PAUSE)) {
+            super.onCreatePrimaryActions(adapter);
+        }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_NEXT)) {
             adapter.add(mSkipNextAction);
+        }
+    }
+
+    @Override
+    protected void onCreateSecondaryActions(ArrayObjectAdapter adapter) {
+        // Does nothing
+        super.onCreateSecondaryActions(adapter);
+
+        // MAX: 7 items. But with custom modification it supports more.
+        // Origin: {@link androidx.leanback.widget.ControlBarPresenter#MAX_CONTROLS}
+        // Custom mod: {@link com.novatube.tv.ui.mod.leanback.playerglue.ControlBarPresenter#MAX_CONTROLS}
+
+        // NovaTube round2: official YT TV right cluster -
+        // Like / Dislike / Comment / Save (one pill), Captions, Settings.
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_LIKE)) {
+            adapter.add(mActions.get(R.id.action_thumbs_up));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_DISLIKE)) {
+            adapter.add(mActions.get(R.id.action_thumbs_down));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_CHAT)) {
+            adapter.add(mActions.get(R.id.action_comment));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_ADD_TO_PLAYLIST)) {
+            adapter.add(mActions.get(R.id.action_playlist_add));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBTITLES)) {
+            adapter.add(mActions.get(R.id.lb_control_closed_captioning));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SETTINGS)) {
+            adapter.add(mActions.get(R.id.action_settings));
+        }
+        // Remaining actions follow the official cluster
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_HIGH_QUALITY)) {
+            adapter.add(mActions.get(R.id.lb_control_high_quality));
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_REPEAT_MODE)) {
             adapter.add(mActions.get(R.id.action_repeat));
@@ -160,14 +225,17 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_SPEED)) {
             adapter.add(mActions.get(R.id.action_video_speed));
         }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PLAYBACK_QUEUE)) {
+            adapter.add(mActions.get(R.id.action_playback_queue));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_CONTENT_BLOCK)) {
+            adapter.add(mActions.get(R.id.action_content_block));
+        }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_STATS)) {
+            adapter.add(mActions.get(R.id.action_video_stats));
+        }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PIP)) {
             adapter.add(mActions.get(R.id.action_pip));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SCREEN_DIMMING)) {
-            adapter.add(mActions.get(R.id.action_screen_dimming));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_CHAT)) {
-            adapter.add(mActions.get(R.id.action_chat));
         }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SEARCH)) {
             adapter.add(mActions.get(R.id.action_search));
@@ -190,52 +258,11 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SOUND_OFF)) {
             adapter.add(mActions.get(R.id.action_sound_off));
         }
+        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SCREEN_DIMMING)) {
+            adapter.add(mActions.get(R.id.action_screen_dimming));
+        }
         if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_AFR)) {
             adapter.add(mActions.get(R.id.action_afr));
-        }
-    }
-
-    @Override
-    protected void onCreateSecondaryActions(ArrayObjectAdapter adapter) {
-        // Does nothing
-        super.onCreateSecondaryActions(adapter);
-
-        // MAX: 7 items. But with custom modification it supports more.
-        // Origin: {@link androidx.leanback.widget.ControlBarPresenter#MAX_CONTROLS}
-        // Custom mod: {@link com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.ControlBarPresenter#MAX_CONTROLS}
-
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_HIGH_QUALITY)) {
-            adapter.add(mActions.get(R.id.lb_control_high_quality));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_OPEN_CHANNEL)) {
-            adapter.add(mActions.get(R.id.action_channel));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_LIKE)) {
-            adapter.add(mActions.get(R.id.action_thumbs_up));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_DISLIKE)) {
-            adapter.add(mActions.get(R.id.action_thumbs_down));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBTITLES)) {
-            adapter.add(mActions.get(R.id.lb_control_closed_captioning));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_ADD_TO_PLAYLIST)) {
-            adapter.add(mActions.get(R.id.action_playlist_add));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_SUBSCRIBE)) {
-            adapter.add(mActions.get(R.id.action_subscribe));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_INFO)) {
-            adapter.add(mActions.get(R.id.action_info));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_PLAYBACK_QUEUE)) {
-            adapter.add(mActions.get(R.id.action_playback_queue));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_CONTENT_BLOCK)) {
-            adapter.add(mActions.get(R.id.action_content_block));
-        }
-        if (mPlayerTweaksData.isPlayerButtonEnabled(PlayerTweaksData.PLAYER_BUTTON_VIDEO_STATS)) {
-            adapter.add(mActions.get(R.id.action_video_stats));
         }
     }
 
@@ -244,8 +271,22 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         PlaybackRowPresenter rowPresenter = super.onCreateRowPresenter();
 
         ((PlaybackTransportRowPresenter) rowPresenter).setOnActionLongClickedListener(this);
+        // NovaTube round2: left cluster adapter (channel / Description / Subscribe)
+        ((PlaybackTransportRowPresenter) rowPresenter).setLeftActionsAdapter(mLeftActionsAdapter);
 
         return rowPresenter;
+    }
+
+    @Override
+    public void setVideo(Video video) {
+        super.setVideo(video);
+
+        // NovaTube round2: show the channel name next to the channel icon (left cluster)
+        ChannelAction channelAction = (ChannelAction) mActions.get(R.id.action_channel);
+        if (channelAction != null && video != null) {
+            channelAction.setChannelName(video.getAuthor());
+            invalidateUi(channelAction);
+        }
     }
 
     @Override
@@ -361,7 +402,7 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         }
 
         // Ignore result to give a chance to handle this event in
-        // com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.maxcontrols.PlaybackTransportRowPresenter.ViewHolder
+        // com.novatube.tv.ui.mod.leanback.playerglue.maxcontrols.PlaybackTransportRowPresenter.ViewHolder
         return handled || super.onKey(v, keyCode, event);
     }
 
@@ -393,6 +434,15 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         } else if (action == mFastForwardAction) {
             fastForward();
             handled = true;
+        } else if (action.getId() == R.id.action_settings) {
+            // NovaTube round2: settings gear opens the compact quick-settings popup
+            // (handled by QuickSettingsController in the controller chain)
+            mActionListener.onAction((int) action.getId(), getActionIndex(action));
+            handled = true;
+        } else if (action.getId() == R.id.action_comment) {
+            // NovaTube round2: comment button reuses the existing chat/comments behavior
+            mActionListener.onAction(R.id.action_chat, getActionIndex(action));
+            handled = true;
         } else if (mActions.containsKey((int) action.getId())) {
             mActionListener.onAction((int) action.getId(), getActionIndex(action));
             handled = true;
@@ -421,7 +471,9 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
         boolean handled = false;
 
         if (mActions.containsKey((int) action.getId())) {
-            mActionListener.onLongAction((int) action.getId(), getActionIndex(action));
+            // NovaTube round2: comment button reuses the existing chat long-press behavior
+            int id = (int) action.getId() == R.id.action_comment ? R.id.action_chat : (int) action.getId();
+            mActionListener.onLongAction(id, getActionIndex(action));
             handled = true;
         }
 
@@ -449,6 +501,9 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
             notifyActionChanged(
                     action,
                     (ArrayObjectAdapter) getControlsRow().getSecondaryActionsAdapter());
+
+            // NovaTube round2: left cluster (channel / Description / Subscribe)
+            notifyActionChanged(action, mLeftActionsAdapter);
         }
     }
 
@@ -558,7 +613,8 @@ public class VideoPlayerGlue extends MaxControlsVideoPlayerGlue<PlayerAdapter> i
             return false;
         }
 
-        return action.getId() == R.id.action_chat;
+        // NovaTube round2: comment button keeps the chat long-press behavior
+        return action.getId() == R.id.action_chat || action.getId() == R.id.action_comment;
     }
 
     @Override
