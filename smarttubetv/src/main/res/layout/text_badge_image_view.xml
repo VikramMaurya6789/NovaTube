@@ -39,7 +39,7 @@
                   android:paddingEnd="@dimen/lb_details_description_title_padding_adjust_bottom"
                   android:textSize="@dimen/card_badge_text_size"
                   style="@style/TextAppearance.Leanback.ImageCardView.Content" />
-        <com.liskovsoft.smartyoutubetv2.tv.ui.widgets.styled.CardProgressBar
+        <com.novatube.tv.ui.widgets.styled.CardProgressBar
             android:id="@+id/clip_progress"
             android:visibility="visible"
             android:layout_width="match_parent"
@@ -47,4 +47,12 @@
             android:max="100"
             android:progress="45"/>
     </LinearLayout>
+    <!-- NovaTube round2: prominent white focus border around the 16:9 thumbnail -->
+    <View
+        android:id="@+id/focus_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nt_card_focus_border"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
 </merge>

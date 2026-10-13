@@ -37,7 +37,7 @@
         android:transitionGroup="false"
         >
         <!-- Change TextView to TitleMarqueeTextViewCompat if you need scrolled header in dialogs -->
-        <com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextviewcompat.TitleMarqueeTextViewCompat
+        <com.novatube.tv.ui.widgets.marqueetextviewcompat.TitleMarqueeTextViewCompat
             android:id="@+id/decor_title"
             android:layout_width="match_parent"
             android:layout_height="@dimen/lb_preference_decor_title_text_height"

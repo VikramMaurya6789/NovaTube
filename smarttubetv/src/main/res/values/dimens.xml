@@ -134,4 +134,19 @@
     <dimen name="tooltip_vertical_padding_mod">6.5dp</dimen>
     <dimen name="tooltip_y_offset_non_touch_mod">0dp</dimen>
     <dimen name="tooltip_y_offset_touch_mod">16dp</dimen>
+
+    <!-- NovaTube round2 -->
+    <dimen name="nav_rail_collapsed_width">76dp</dimen>
+    <dimen name="nav_rail_expanded_width">264dp</dimen>
+    <dimen name="nav_rail_item_height">60dp</dimen>
+    <dimen name="nav_rail_icon_size">24dp</dimen>
+    <dimen name="nav_rail_item_margin">6dp</dimen>
+    <dimen name="nav_rail_item_padding_start">20dp</dimen>
+    <dimen name="nav_rail_item_elevation">3dp</dimen>
+    <dimen name="nav_rail_pill_radius">30dp</dimen>
+    <!-- NovaTube round2 -->
+    <dimen name="nt_card_focus_border_width">3dp</dimen>
+    <dimen name="nt_card_corner_radius">12dp</dimen>
+    <dimen name="nt_pill_corner_radius">24dp</dimen>
+    <dimen name="nt_player_cluster_spacing">12dp</dimen>
 </resources>
