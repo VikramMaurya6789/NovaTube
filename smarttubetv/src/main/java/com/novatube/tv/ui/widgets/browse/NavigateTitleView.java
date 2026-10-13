@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.browse;
+package com.novatube.tv.ui.widgets.browse;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,24 +20,24 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.liskovsoft.mediaserviceinterfaces.oauth.Account;
 import com.liskovsoft.sharedutils.locale.LocaleUtility;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.dialogs.AccountSelectionPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.settings.AccountSettingsPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.settings.LanguageSettingsPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ViewManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.MediaServiceManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.MediaServiceManager.AccountChangeListener;
-import com.liskovsoft.smartyoutubetv2.common.prefs.common.DataChangeBase.OnDataChange;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tooltips.TooltipCompatHandler;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.search.LongClickSearchOrbView;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.time.DateTimeView;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.presenters.PlaybackPresenter;
+import com.novatube.common.app.presenters.dialogs.AccountSelectionPresenter;
+import com.novatube.common.app.presenters.settings.AccountSettingsPresenter;
+import com.novatube.common.app.presenters.settings.LanguageSettingsPresenter;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.app.views.ViewManager;
+import com.novatube.common.misc.MediaServiceManager;
+import com.novatube.common.misc.MediaServiceManager.AccountChangeListener;
+import com.novatube.common.prefs.common.DataChangeBase.OnDataChange;
+import com.novatube.common.prefs.GeneralData;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.mod.leanback.playerglue.tooltips.TooltipCompatHandler;
+import com.novatube.tv.ui.widgets.search.LongClickSearchOrbView;
+import com.novatube.tv.ui.widgets.time.DateTimeView;
+import com.novatube.tv.util.ViewUtil;
 
 import java.util.Locale;
 

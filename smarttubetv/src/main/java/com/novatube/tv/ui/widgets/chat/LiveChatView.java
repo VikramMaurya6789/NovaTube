@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.chat;
+package com.novatube.tv.ui.widgets.chat;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.annotation.Nullable;
 import com.bumptech.glide.Glide;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.ChatReceiver;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.playback.ui.ChatReceiver;
+import com.novatube.common.prefs.PlayerTweaksData;
+import com.novatube.tv.util.ViewUtil;
 import com.stfalcon.chatkit.messages.MessagesListAdapter;
 
 public class LiveChatView extends com.stfalcon.chatkit.messages.MessagesList {

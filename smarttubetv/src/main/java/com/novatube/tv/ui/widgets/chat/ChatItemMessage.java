@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.chat;
+package com.novatube.tv.ui.widgets.chat;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -6,9 +6,9 @@ import android.text.TextUtils;
 import com.liskovsoft.mediaserviceinterfaces.data.ChatItem;
 import com.liskovsoft.mediaserviceinterfaces.data.CommentItem;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
 import com.liskovsoft.googlecommon.common.helpers.ServiceHelper;
 import com.stfalcon.chatkit.commons.models.IMessage;
 

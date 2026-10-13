@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.webbrowser;
+package com.novatube.tv.ui.webbrowser;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.webkit.WebView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.WebBrowserPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.WebBrowserView;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.common.app.presenters.WebBrowserPresenter;
+import com.novatube.common.app.views.WebBrowserView;
+import com.novatube.tv.R;
 
 public class WebBrowserFragment extends Fragment implements WebBrowserView {
     private WebView mWebView;

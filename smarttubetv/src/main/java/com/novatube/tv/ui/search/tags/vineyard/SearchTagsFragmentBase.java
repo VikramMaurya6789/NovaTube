@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.search.tags.vineyard;
+package com.novatube.tv.ui.search.tags.vineyard;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -18,19 +18,19 @@ import androidx.leanback.widget.SpeechRecognitionCallback;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
 import com.liskovsoft.sharedutils.helpers.PermissionHelpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.search.SearchTagsProvider;
-import com.liskovsoft.smartyoutubetv2.common.app.models.search.vineyard.Tag;
-import com.liskovsoft.smartyoutubetv2.common.app.views.SearchView;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.SearchData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.adapter.vineyard.PaginationAdapter;
-import com.liskovsoft.smartyoutubetv2.tv.adapter.vineyard.TagAdapter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.CustomListRowPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.base.OnItemLongPressedListener;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.vineyard.TagPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.ProgressBarManager;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.search.SearchSupportFragment;
+import com.novatube.common.app.models.search.SearchTagsProvider;
+import com.novatube.common.app.models.search.vineyard.Tag;
+import com.novatube.common.app.views.SearchView;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.common.prefs.SearchData;
+import com.novatube.tv.R;
+import com.novatube.tv.adapter.vineyard.PaginationAdapter;
+import com.novatube.tv.adapter.vineyard.TagAdapter;
+import com.novatube.tv.presenter.CustomListRowPresenter;
+import com.novatube.tv.presenter.base.OnItemLongPressedListener;
+import com.novatube.tv.presenter.vineyard.TagPresenter;
+import com.novatube.tv.ui.mod.leanback.misc.ProgressBarManager;
+import com.novatube.tv.ui.mod.leanback.search.SearchSupportFragment;
 
 import net.gotev.speech.GoogleVoiceTypingDisabledException;
 import net.gotev.speech.Speech;

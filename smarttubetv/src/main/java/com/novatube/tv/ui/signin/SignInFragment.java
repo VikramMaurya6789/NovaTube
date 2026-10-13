@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.signin;
+package com.novatube.tv.ui.signin;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,11 +15,11 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SignInPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.SignInView;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.presenters.SignInPresenter;
+import com.novatube.common.app.views.SignInView;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.util.ViewUtil;
 
 import java.util.List;
 
