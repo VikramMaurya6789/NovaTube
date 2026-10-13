@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.mod.surface;
+package com.novatube.tv.ui.playback.mod.surface;
 
 import android.view.SurfaceHolder;
 import androidx.leanback.app.PlaybackSupportFragmentGlueHost;

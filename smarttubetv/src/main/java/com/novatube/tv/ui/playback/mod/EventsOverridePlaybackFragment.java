@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.mod;
+package com.novatube.tv.ui.playback.mod;
 
 import android.os.Bundle;
 import android.view.InputEvent;
@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.leanback.app.PlaybackSupportFragment;
 import androidx.leanback.widget.VerticalGridView;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.mod.surface.SurfacePlaybackFragment;
+import com.novatube.tv.ui.playback.mod.surface.SurfacePlaybackFragment;
 
 /**
  *  Every successfully handled event invokes {@link PlaybackSupportFragment#tickle} that makes ui to appear.

@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.mod;
+package com.novatube.tv.ui.playback.mod;
 
 import android.os.Bundle;
 import android.os.Handler;
