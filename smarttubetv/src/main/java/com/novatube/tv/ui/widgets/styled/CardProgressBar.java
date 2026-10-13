@@ -1,10 +1,10 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.styled;
+package com.novatube.tv.ui.widgets.styled;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 import androidx.annotation.RequiresApi;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class CardProgressBar extends ProgressBar {
     private static final String TAG = CardProgressBar.class.getSimpleName();

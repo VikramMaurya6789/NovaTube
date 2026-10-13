@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.time;
+package com.novatube.tv.ui.widgets.time;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,13 +11,13 @@ import androidx.core.content.ContextCompat;
 
 import com.liskovsoft.sharedutils.helpers.DateHelper;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.misc.TickleManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.TickleManager.TickleListener;
-import com.liskovsoft.smartyoutubetv2.common.prefs.common.DataChangeBase.OnDataChange;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.common.app.presenters.PlaybackPresenter;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.misc.TickleManager;
+import com.novatube.common.misc.TickleManager.TickleListener;
+import com.novatube.common.prefs.common.DataChangeBase.OnDataChange;
+import com.novatube.common.prefs.PlayerData;
+import com.novatube.tv.R;
 
 @SuppressLint("AppCompatCustomView")
 public class EndingTimeView extends TextView implements TickleListener, OnDataChange {

@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.vineyard;
+package com.novatube.tv.ui.widgets.vineyard;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.leanback.widget.BaseCardView;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class IconCardView extends BaseCardView {
     RelativeLayout mLayout;

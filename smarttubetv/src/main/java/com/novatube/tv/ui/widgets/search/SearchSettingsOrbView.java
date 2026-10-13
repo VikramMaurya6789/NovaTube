@@ -1,10 +1,10 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.search;
+package com.novatube.tv.ui.widgets.search;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import androidx.core.content.ContextCompat;
 import androidx.leanback.widget.SearchOrbView;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 /**
  * Not used<br/>

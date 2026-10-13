@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.test;
+package com.novatube.tv.ui.widgets.test;
 
 import android.content.Context;
 import android.graphics.Rect;

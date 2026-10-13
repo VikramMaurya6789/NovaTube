@@ -1,10 +1,10 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.search;
+package com.novatube.tv.ui.widgets.search;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import androidx.leanback.widget.SearchOrbView;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
+import com.novatube.common.prefs.GeneralData;
 
 /**
  *     1) Add long click listener <br/>

@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.time;
+package com.novatube.tv.ui.widgets.time;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.liskovsoft.sharedutils.helpers.DateHelper;
-import com.liskovsoft.smartyoutubetv2.common.misc.TickleManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.TickleManager.TickleListener;
+import com.novatube.common.misc.TickleManager;
+import com.novatube.common.misc.TickleManager.TickleListener;
 
 /**
  * Note, same view is used inside player and in as global time view

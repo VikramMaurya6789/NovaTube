@@ -1,11 +1,11 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextviewcompat;
+package com.novatube.tv.ui.widgets.marqueetextviewcompat;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.common.utils.Utils;
 
 /**
  * MarqueeTextView used in browse pip title, dialog headers and more
