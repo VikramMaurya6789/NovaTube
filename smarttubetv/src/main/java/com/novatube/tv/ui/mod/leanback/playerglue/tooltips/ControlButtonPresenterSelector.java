@@ -52,14 +52,20 @@ public class ControlButtonPresenterSelector extends PresenterSelector {
      * in the right cluster, in display order. Segment backgrounds (left/mid/right)
      * follow this order so the pill stays seamless when a button is toggled off.
      */
-    private List<Integer> mPillOrder = new ArrayList<>(Arrays.asList(
+    private static final List<Integer> DEFAULT_PILL_ORDER = Arrays.asList(
             com.novatube.tv.R.id.action_thumbs_up,
             com.novatube.tv.R.id.action_thumbs_down,
             com.novatube.tv.R.id.action_comment,
-            com.novatube.tv.R.id.action_playlist_add));
+            com.novatube.tv.R.id.action_playlist_add);
+
+    private List<Integer> mPillOrder = new ArrayList<>(DEFAULT_PILL_ORDER);
 
     public void setPillOrder(List<Integer> idsInOrder) {
         mPillOrder = idsInOrder != null ? idsInOrder : new ArrayList<>();
+        // NovaTube round2: the pill order is consumed by the (static) button presenters,
+        // so propagate it to them.
+        mPrimaryPresenter.setPillOrder(mPillOrder);
+        mSecondaryPresenter.setPillOrder(mPillOrder);
     }
 
     private final ControlButtonPresenter mPrimaryPresenter =
@@ -128,6 +134,8 @@ public class ControlButtonPresenterSelector extends PresenterSelector {
         private int mLayoutResourceId;
         private boolean tooltipsEnabled;
         private int mMode = MODE_DEFAULT;
+        /** NovaTube round2: pill segment order, propagated from the selector. */
+        private List<Integer> mPillOrder = new ArrayList<>(DEFAULT_PILL_ORDER);
 
         ControlButtonPresenter(int layoutResourceId) {
             mLayoutResourceId = layoutResourceId;
@@ -141,6 +149,11 @@ public class ControlButtonPresenterSelector extends PresenterSelector {
 
         public void setMode(int mode) {
             mMode = mode;
+        }
+
+        /** NovaTube round2: ids of the pill buttons in display order. */
+        public void setPillOrder(List<Integer> idsInOrder) {
+            mPillOrder = idsInOrder != null ? idsInOrder : new ArrayList<>();
         }
 
         @Override
