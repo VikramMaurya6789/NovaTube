@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextview;
+package com.novatube.tv.ui.widgets.marqueetextview;
 
 import android.content.Context;
 import android.util.AttributeSet;

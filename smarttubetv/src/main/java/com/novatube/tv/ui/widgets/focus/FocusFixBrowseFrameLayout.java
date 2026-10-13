@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.widgets.focus;
+package com.novatube.tv.ui.widgets.focus;
 
 import android.content.Context;
 import android.util.AttributeSet;
