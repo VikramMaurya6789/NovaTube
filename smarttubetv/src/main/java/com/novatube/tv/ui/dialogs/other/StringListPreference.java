@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other;
+package com.novatube.tv.ui.dialogs.other;
 
 import android.content.Context;
 import android.util.AttributeSet;

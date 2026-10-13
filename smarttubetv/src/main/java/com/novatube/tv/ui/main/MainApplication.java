@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.main;
+package com.novatube.tv.ui.main;
 
 import android.os.Build.VERSION;
 
@@ -6,32 +6,32 @@ import androidx.multidex.MultiDexApplication;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.BrowseSection;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.BrowsePresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.AddDeviceView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.AppDialogView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.BrowseView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ChannelUploadsView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ChannelView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.SearchView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.SignInView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.SplashView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ViewManager;
-import com.liskovsoft.smartyoutubetv2.common.app.views.WebBrowserView;
-import com.liskovsoft.smartyoutubetv2.common.prefs.NetworkData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData;
-import com.liskovsoft.smartyoutubetv2.tv.ui.adddevice.AddDeviceActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.BrowseActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.channel.ChannelActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.channeluploads.ChannelUploadsActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.AppDialogActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.AppDialogActivityOpaque;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.PlaybackActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.search.tags.SearchTagsActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.signin.SignInActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.webbrowser.WebBrowserActivity;
+import com.novatube.common.app.models.data.BrowseSection;
+import com.novatube.common.app.presenters.BrowsePresenter;
+import com.novatube.common.app.views.AddDeviceView;
+import com.novatube.common.app.views.AppDialogView;
+import com.novatube.common.app.views.BrowseView;
+import com.novatube.common.app.views.ChannelUploadsView;
+import com.novatube.common.app.views.ChannelView;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.app.views.SearchView;
+import com.novatube.common.app.views.SignInView;
+import com.novatube.common.app.views.SplashView;
+import com.novatube.common.app.views.ViewManager;
+import com.novatube.common.app.views.WebBrowserView;
+import com.novatube.common.prefs.NetworkData;
+import com.novatube.common.prefs.PlayerData;
+import com.novatube.common.prefs.PlayerTweaksData;
+import com.novatube.tv.ui.adddevice.AddDeviceActivity;
+import com.novatube.tv.ui.browse.BrowseActivity;
+import com.novatube.tv.ui.channel.ChannelActivity;
+import com.novatube.tv.ui.channeluploads.ChannelUploadsActivity;
+import com.novatube.tv.ui.dialogs.AppDialogActivity;
+import com.novatube.tv.ui.dialogs.AppDialogActivityOpaque;
+import com.novatube.tv.ui.playback.PlaybackActivity;
+import com.novatube.tv.ui.search.tags.SearchTagsActivity;
+import com.novatube.tv.ui.signin.SignInActivity;
+import com.novatube.tv.ui.webbrowser.WebBrowserActivity;
 
 import org.conscrypt.Conscrypt;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.clickable;
+package com.novatube.tv.ui.mod.clickable;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -34,7 +34,7 @@ import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.annotation.Retention;

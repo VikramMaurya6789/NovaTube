@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.clickable;
+package com.novatube.tv.ui.mod.clickable;
 
 import androidx.annotation.RestrictTo;
 
