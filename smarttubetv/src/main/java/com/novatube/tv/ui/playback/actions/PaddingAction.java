@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions;
+package com.novatube.tv.ui.playback.actions;
 
 import androidx.leanback.widget.Action;
 
