@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs;
+package com.novatube.tv.ui.dialogs;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
@@ -10,15 +10,15 @@ import androidx.fragment.app.Fragment;
 
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.app.views.ViewManager;
-import com.liskovsoft.smartyoutubetv2.common.misc.GlobalKeyTranslator;
-import com.liskovsoft.smartyoutubetv2.common.misc.PlayerKeyTranslator;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
-import com.liskovsoft.smartyoutubetv2.tv.ui.playback.PlaybackActivity;
+import com.novatube.common.app.presenters.PlaybackPresenter;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.app.views.ViewManager;
+import com.novatube.common.misc.GlobalKeyTranslator;
+import com.novatube.common.misc.PlayerKeyTranslator;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.R;
+import com.novatube.common.misc.MotherActivity;
+import com.novatube.tv.ui.playback.PlaybackActivity;
 
 public class AppDialogActivity extends MotherActivity {
     private static final String TAG = AppDialogActivity.class.getSimpleName();

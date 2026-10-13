@@ -1,9 +1,9 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other;
+package com.novatube.tv.ui.dialogs.other;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import androidx.preference.DialogPreference;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.ChatReceiver;
+import com.novatube.common.app.models.playback.ui.ChatReceiver;
 
 public class ChatPreference extends DialogPreference {
     private ChatReceiver mChatReceiver;

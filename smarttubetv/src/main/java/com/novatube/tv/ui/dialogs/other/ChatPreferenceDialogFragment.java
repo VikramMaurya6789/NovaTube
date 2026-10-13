@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other;
+package com.novatube.tv.ui.dialogs.other;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,11 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.preference.DialogPreference;
 import com.bumptech.glide.Glide;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.ChatReceiver;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.preference.LeanbackPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.chat.ChatItemMessage;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.playback.ui.ChatReceiver;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.mod.leanback.preference.LeanbackPreferenceDialogFragment;
+import com.novatube.tv.ui.widgets.chat.ChatItemMessage;
+import com.novatube.tv.util.ViewUtil;
 import com.stfalcon.chatkit.messages.MessagesList;
 import com.stfalcon.chatkit.messages.MessagesListAdapter;
 

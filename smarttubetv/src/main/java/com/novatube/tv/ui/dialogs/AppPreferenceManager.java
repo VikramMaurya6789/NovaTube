@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs;
+package com.novatube.tv.ui.dialogs;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -8,13 +8,13 @@ import androidx.preference.MultiSelectListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.OptionCategory;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.OptionItem;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.ChatPreference;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.CommentsPreference;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.StringListPreference;
+import com.novatube.common.app.models.playback.ui.OptionCategory;
+import com.novatube.common.app.models.playback.ui.OptionItem;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.dialogs.other.ChatPreference;
+import com.novatube.tv.ui.dialogs.other.CommentsPreference;
+import com.novatube.tv.ui.dialogs.other.StringListPreference;
 
 import java.util.HashSet;
 import java.util.List;

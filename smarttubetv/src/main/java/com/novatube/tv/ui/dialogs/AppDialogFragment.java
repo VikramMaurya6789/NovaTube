@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs;
+package com.novatube.tv.ui.dialogs;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -18,21 +18,21 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.OptionCategory;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.AppDialogPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.AppDialogView;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.ChatPreference;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.ChatPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.CommentsPreference;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.CommentsPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.RadioListPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.StringListPreference;
-import com.liskovsoft.smartyoutubetv2.tv.ui.dialogs.other.StringListPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.preference.LeanbackListPreferenceDialogFragment;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.playback.ui.OptionCategory;
+import com.novatube.common.app.presenters.AppDialogPresenter;
+import com.novatube.common.app.views.AppDialogView;
+import com.novatube.common.misc.MotherActivity;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.dialogs.other.ChatPreference;
+import com.novatube.tv.ui.dialogs.other.ChatPreferenceDialogFragment;
+import com.novatube.tv.ui.dialogs.other.CommentsPreference;
+import com.novatube.tv.ui.dialogs.other.CommentsPreferenceDialogFragment;
+import com.novatube.tv.ui.dialogs.other.RadioListPreferenceDialogFragment;
+import com.novatube.tv.ui.dialogs.other.StringListPreference;
+import com.novatube.tv.ui.dialogs.other.StringListPreferenceDialogFragment;
+import com.novatube.tv.ui.mod.leanback.preference.LeanbackListPreferenceDialogFragment;
+import com.novatube.tv.util.ViewUtil;
 
 import java.util.List;
 

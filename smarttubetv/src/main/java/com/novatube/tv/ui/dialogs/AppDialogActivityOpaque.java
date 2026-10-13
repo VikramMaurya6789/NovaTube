@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.dialogs;
+package com.novatube.tv.ui.dialogs;
 
 // Android 8 fallback
 public class AppDialogActivityOpaque extends AppDialogActivity {
