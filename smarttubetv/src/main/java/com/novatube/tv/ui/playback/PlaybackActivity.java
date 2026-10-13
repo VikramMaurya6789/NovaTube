@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback;
+package com.novatube.tv.ui.playback;
 
 import android.annotation.TargetApi;
 import android.app.PictureInPictureParams;
@@ -12,15 +12,15 @@ import androidx.fragment.app.Fragment;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.manager.PlayerEngine;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.AppDialogPresenter;
-import com.liskovsoft.smartyoutubetv2.common.app.views.PlaybackView;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerData;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.common.LeanbackActivity;
+import com.novatube.common.app.models.playback.manager.PlayerEngine;
+import com.novatube.common.app.presenters.AppDialogPresenter;
+import com.novatube.common.app.views.PlaybackView;
+import com.novatube.common.prefs.GeneralData;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.common.prefs.PlayerData;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.common.LeanbackActivity;
 
 /**
  * Loads PlaybackFragment and delegates input from a game controller.

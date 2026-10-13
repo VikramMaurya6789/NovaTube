@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.search;
+package com.novatube.tv.ui.mod.leanback.search;
 
 import androidx.leanback.app.RowsSupportFragment;
 

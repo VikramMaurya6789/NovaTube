@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.widget;
+package com.novatube.tv.ui.mod.leanback.widget;
 
 import androidx.leanback.widget.Action;
 

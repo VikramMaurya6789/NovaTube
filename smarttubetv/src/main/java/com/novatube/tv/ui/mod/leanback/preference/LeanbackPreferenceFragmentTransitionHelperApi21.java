@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.preference;
+package com.novatube.tv.ui.mod.leanback.preference;
 
 import android.app.Fragment;
 import android.transition.Transition;
 import android.view.Gravity;
 import androidx.annotation.RequiresApi;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.transition.FadeAndShortSlide;
+import com.novatube.tv.ui.mod.leanback.transition.FadeAndShortSlide;
 
 /**
  * @hide

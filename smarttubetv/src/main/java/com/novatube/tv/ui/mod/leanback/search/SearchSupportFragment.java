@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.search;
+package com.novatube.tv.ui.mod.leanback.search;
 
 import android.Manifest;
 import android.content.ActivityNotFoundException;
@@ -40,9 +40,9 @@ import androidx.leanback.widget.VerticalGridView;
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.SearchPresenter;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.BuildConfig;
+import com.novatube.common.app.presenters.SearchPresenter;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.BuildConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -259,7 +259,7 @@ public class SearchSupportFragment extends Fragment {
                     && grantResults[0] == PERMISSION_GRANTED) {
                 startRecognition();
             } else {
-                MessageHelpers.showMessage(getContext(), com.liskovsoft.smartyoutubetv2.common.R.string.not_supported_by_device);
+                MessageHelpers.showMessage(getContext(), com.novatube.common.R.string.not_supported_by_device);
             }
         }
     }
@@ -385,7 +385,7 @@ public class SearchSupportFragment extends Fragment {
         //mSearchTextEditor.setOnKeyboardDismissListener(this::focusOnSearchField);
 
         // MOD: commit search button
-        mSearchOrbView = mSearchBar.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.lb_search_bar_search_orb);
+        mSearchOrbView = mSearchBar.findViewById(com.novatube.tv.R.id.lb_search_bar_search_orb);
         mSearchOrbView.setOnFocusChangeListener((v, focused) -> {
             if (focused) {
                 Helpers.hideKeyboard(getContext(), v);
@@ -394,7 +394,7 @@ public class SearchSupportFragment extends Fragment {
         mSearchOrbView.setOnOrbClickedListener(v -> submitQuery(getSearchBarText()));
 
         // MOD: search settings button
-        mSearchSettingsOrbView = mSearchBar.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.search_settings_orb);
+        mSearchSettingsOrbView = mSearchBar.findViewById(com.novatube.tv.R.id.search_settings_orb);
         mSearchSettingsOrbView.setOnFocusChangeListener((v, focused) -> {
             if (focused) {
                 Helpers.hideKeyboard(getContext(), v);
