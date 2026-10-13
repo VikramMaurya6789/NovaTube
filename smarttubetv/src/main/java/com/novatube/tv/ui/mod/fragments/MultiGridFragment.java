@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.fragments;
+package com.novatube.tv.ui.mod.fragments;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +24,7 @@ import androidx.leanback.widget.VerticalGridPresenter;
 import androidx.leanback.widget.VerticalGridView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 /**
  * Managing multiple grids at a time.<br/>

@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue;
+package com.novatube.tv.ui.mod.leanback.playerglue;
 
 import androidx.annotation.RestrictTo;
 

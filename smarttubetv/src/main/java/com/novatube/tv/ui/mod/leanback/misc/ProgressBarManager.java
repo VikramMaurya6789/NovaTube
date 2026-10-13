@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc;
+package com.novatube.tv.ui.mod.leanback.misc;
 
 import android.view.Gravity;
 import android.view.View;
@@ -10,8 +10,8 @@ import androidx.core.content.ContextCompat;
 import androidx.leanback.app.BrowseFragment;
 import androidx.leanback.app.VerticalGridFragment;
 
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.R;
 
 /**
  * Manager for showing/hiding progress bar widget. This class lets user specify an initial

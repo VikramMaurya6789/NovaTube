@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc;
+package com.novatube.tv.ui.mod.leanback.misc;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

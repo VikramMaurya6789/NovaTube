@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc;
+package com.novatube.tv.ui.mod.leanback.misc;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -31,7 +31,7 @@ import android.view.View;
 import androidx.annotation.RestrictTo;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.leanback.R;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.SeekBarSegment;
+import com.novatube.common.app.models.playback.ui.SeekBarSegment;
 
 import java.util.ArrayList;
 import java.util.List;

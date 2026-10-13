@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.framedrops;
+package com.novatube.tv.ui.mod.leanback.playerglue.framedrops;
 
 import android.content.Context;
 import android.os.Handler;
@@ -35,7 +35,7 @@ import androidx.leanback.widget.PlaybackSeekDataProvider;
 import androidx.leanback.widget.PlaybackSeekUi;
 import androidx.leanback.widget.PlaybackTransportRowPresenter;
 import androidx.leanback.widget.RowPresenter;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerData;
+import com.novatube.common.prefs.PlayerData;
 
 import java.lang.ref.WeakReference;
 

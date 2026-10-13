@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.headers;
+package com.novatube.tv.ui.mod.leanback.headers;
 
 import android.view.KeyEvent;
 import android.view.View;
