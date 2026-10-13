@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -27,11 +27,11 @@ import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
 import com.liskovsoft.sharedutils.helpers.MessageHelpers;
 import com.liskovsoft.sharedutils.helpers.PermissionHelpers;
-import com.liskovsoft.smartyoutubetv2.common.misc.MotherActivity;
-import com.liskovsoft.smartyoutubetv2.common.prefs.SearchData;
-import com.liskovsoft.smartyoutubetv2.tv.BuildConfig;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.misc.MotherActivity;
+import com.novatube.common.prefs.SearchData;
+import com.novatube.tv.BuildConfig;
+import com.novatube.tv.R;
+import com.novatube.tv.util.ViewUtil;
 
 import net.gotev.speech.GoogleVoiceTypingDisabledException;
 import net.gotev.speech.Speech;
