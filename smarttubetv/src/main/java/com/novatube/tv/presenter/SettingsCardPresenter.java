@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.leanback.widget.Presenter;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.SettingsItem;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.SettingsItem;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.R;
+import com.novatube.tv.util.ViewUtil;
 
 public class SettingsCardPresenter extends Presenter {
     private int mDefaultBackgroundColor;
@@ -33,7 +33,7 @@ public class SettingsCardPresenter extends Presenter {
         mSelectedBackgroundColor =
                 ContextCompat.getColor(context, R.color.card_selected_background_white);
         mSelectedTextColor =
-                ContextCompat.getColor(context, R.color.card_selected_text_grey);
+                ContextCompat.getColor(context, R.color.card_default_text); // NovaTube: selected card bg is dark now
 
         @SuppressLint("InflateParams")
         View container = LayoutInflater.from(context).inflate(R.layout.settings_card, null);

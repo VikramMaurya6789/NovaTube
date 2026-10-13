@@ -1,9 +1,9 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter.base;
+package com.novatube.tv.presenter.base;
 
 import android.view.KeyEvent;
 import androidx.leanback.widget.Presenter;
 import com.liskovsoft.sharedutils.helpers.KeyHelpers;
-import com.liskovsoft.smartyoutubetv2.common.prefs.GeneralData;
+import com.novatube.common.prefs.GeneralData;
 
 public abstract class LongClickPresenter extends Presenter {
     private OnItemLongPressedListener mLongPressedListener;

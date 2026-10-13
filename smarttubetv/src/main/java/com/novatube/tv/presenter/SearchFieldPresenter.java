@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import android.content.Context;
 import android.text.Editable;
@@ -13,10 +13,10 @@ import androidx.leanback.widget.Presenter;
 
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.GridFragmentHelper;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.tv.R;
+import com.novatube.tv.ui.browse.video.GridFragmentHelper;
+import com.novatube.tv.util.ViewUtil;
 
 public class SearchFieldPresenter extends Presenter {
     private static final String TAG = SearchFieldPresenter.class.getSimpleName();

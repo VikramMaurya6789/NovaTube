@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.leanback.widget.Presenter;
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class GridItemPresenter extends Presenter {
     private final Fragment mainFragment;

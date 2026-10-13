@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,14 +20,14 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.liskovsoft.sharedutils.helpers.Helpers;
 import com.liskovsoft.sharedutils.mylogger.Log;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.prefs.MainUIData;
-import com.liskovsoft.smartyoutubetv2.common.utils.ClickbaitRemover;
-import com.liskovsoft.smartyoutubetv2.tv.R;
-import com.liskovsoft.smartyoutubetv2.tv.presenter.base.LongClickPresenter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.browse.video.GridFragmentHelper;
-import com.liskovsoft.smartyoutubetv2.tv.ui.widgets.complexcardview.ComplexImageCardView;
-import com.liskovsoft.smartyoutubetv2.tv.util.ViewUtil;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.prefs.MainUIData;
+import com.novatube.common.utils.ClickbaitRemover;
+import com.novatube.tv.R;
+import com.novatube.tv.presenter.base.LongClickPresenter;
+import com.novatube.tv.ui.browse.video.GridFragmentHelper;
+import com.novatube.tv.ui.widgets.complexcardview.ComplexImageCardView;
+import com.novatube.tv.util.ViewUtil;
 
 /*
  * A CardPresenter is used to generate Views and bind Objects to them on demand.
@@ -39,6 +39,7 @@ public class VideoCardPresenter extends LongClickPresenter {
     private int mDefaultTextColor = -1;
     private int mSelectedBackgroundColor = -1;
     private int mSelectedTextColor = -1;
+    private int mMetaTextColor = -1; // NovaTube round2: grey subtitle/metadata
     private int mCardPreviewType;
     private int mThumbQuality;
     private int mWidth;
@@ -55,7 +56,10 @@ public class VideoCardPresenter extends LongClickPresenter {
         mSelectedBackgroundColor =
                 ContextCompat.getColor(context, Helpers.getThemeAttr(context, R.attr.cardSelectedBackground));
         mSelectedTextColor =
-                ContextCompat.getColor(context, R.color.card_selected_text_grey);
+                ContextCompat.getColor(context, R.color.card_default_text); // NovaTube: selected card bg is dark now
+        // NovaTube round2: card subtitle/metadata text grey (official YT TV style)
+        mMetaTextColor =
+                ContextCompat.getColor(context, R.color.nt_card_meta_grey);
 
         mCardPreviewType = getCardPreviewType(context);
         mThumbQuality = getThumbQuality(context);
@@ -112,7 +116,8 @@ public class VideoCardPresenter extends LongClickPresenter {
         }
         TextView contentText = view.findViewById(R.id.content_text);
         if (contentText != null) {
-            contentText.setTextColor(textColor);
+            // NovaTube round2: subtitle/metadata stays grey in both states
+            contentText.setTextColor(mMetaTextColor);
         }
     }
 
@@ -157,7 +162,7 @@ public class VideoCardPresenter extends LongClickPresenter {
                 .apply(ViewUtil.glideOptions())
                 // improve image compression on low end devices
                 .override(mWidth, mHeight)
-                // com.liskovsoft.smartyoutubetv2.tv.util.CacheGlideModule
+                // com.novatube.tv.util.CacheGlideModule
                 // Cache makes app crashing on old android versions
                 .diskCacheStrategy(VERSION.SDK_INT > 21 ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
                 .listener(mErrorListener)

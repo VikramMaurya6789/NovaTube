@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.presenter;
+package com.novatube.tv.presenter;
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
+import com.novatube.common.app.models.data.Video;
 
 public class DetailsDescriptionPresenter extends AbstractDetailsDescriptionPresenter {
 
