@@ -71,3 +71,7 @@ tmp/
 fabric.properties
 *BAK.java
 hs_err_pid*.log
+
+# NovaTube local secrets - NEVER commit
+keystore.properties
+.gradle-dl/

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.liskovsoft.smartyoutubetv2.common">
+          package="com.novatube.common">
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <!-- Android 14 (API 34) -->
     <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" /> -->
@@ -34,7 +34,7 @@
     <!-- More info: https://stackoverflow.com/questions/63364476/requestlegacyexternalstorage-is-not-working-in-android-11-api-30 -->
     <application android:requestLegacyExternalStorage="true">
         <receiver
-            android:name="com.liskovsoft.smartyoutubetv2.common.misc.RemoteControlReceiver"
+            android:name="com.novatube.common.misc.RemoteControlReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -59,11 +59,11 @@
         <!-- NOTE: Starting from Android 12 (api 31) foreground service with type 'connectedDevice' not supported -->
         <!-- Use 'mediaPlayback' type instead -->
         <service
-            android:name="com.liskovsoft.smartyoutubetv2.common.misc.RemoteControlService"
+            android:name="com.novatube.common.misc.RemoteControlService"
             android:enabled="true"
             android:foregroundServiceType="mediaPlayback"/>
         <service
-            android:name="com.liskovsoft.smartyoutubetv2.common.misc.BackgroundPlaybackService"
+            android:name="com.novatube.common.misc.BackgroundPlaybackService"
             android:enabled="true"/>
 
         <activity android:name=".misc.BackupReceiverActivity"
