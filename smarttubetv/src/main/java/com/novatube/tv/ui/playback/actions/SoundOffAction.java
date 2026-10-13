@@ -1,8 +1,8 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.playback.actions;
+package com.novatube.tv.ui.playback.actions;
 
 import android.content.Context;
 
-import com.liskovsoft.smartyoutubetv2.tv.R;
+import com.novatube.tv.R;
 
 public class SoundOffAction extends TwoStateAction {
     public SoundOffAction(Context context) {
