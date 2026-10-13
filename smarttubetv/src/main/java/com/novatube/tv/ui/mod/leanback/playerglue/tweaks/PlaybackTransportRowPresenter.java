@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks;
+package com.novatube.tv.ui.mod.leanback.playerglue.tweaks;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -40,16 +40,16 @@ import androidx.leanback.widget.Presenter;
 import androidx.leanback.widget.RowPresenter;
 
 import com.liskovsoft.sharedutils.helpers.DateHelper;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.SeekBarSegment;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerData;
-import com.liskovsoft.smartyoutubetv2.common.prefs.PlayerTweaksData;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.misc.SeekBar;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tooltips.ControlButtonPresenterSelector;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlClickedListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlLongClickedListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlSelectedListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.seekpreview.ThumbsBar;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.widget.OnActionLongClickedListener;
+import com.novatube.common.app.models.playback.ui.SeekBarSegment;
+import com.novatube.common.prefs.PlayerData;
+import com.novatube.common.prefs.PlayerTweaksData;
+import com.novatube.tv.ui.mod.leanback.misc.SeekBar;
+import com.novatube.tv.ui.mod.leanback.playerglue.tooltips.ControlButtonPresenterSelector;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlClickedListener;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlLongClickedListener;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.ControlBarPresenter.OnControlSelectedListener;
+import com.novatube.tv.ui.mod.leanback.playerglue.seekpreview.ThumbsBar;
+import com.novatube.tv.ui.mod.leanback.widget.OnActionLongClickedListener;
 
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
@@ -88,6 +88,7 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         final ViewGroup mDescriptionDock;
         final ViewGroup mControlsDock;
         final ViewGroup mSecondaryControlsDock;
+        final ViewGroup mLeftControlsDock; // NovaTube round2: left cluster dock
         final TextView mTotalTime;
         final TextView mCurrentTime;
         final TextView mEndingTime;
@@ -109,8 +110,11 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         final StringBuilder mTempBuilder = new StringBuilder();
         ControlBarPresenter.ViewHolder mControlsVh;
         ControlBarPresenter.ViewHolder mSecondaryControlsVh;
+        ControlBarPresenter.ViewHolder mLeftControlsVh; // NovaTube round2
         BoundData mControlsBoundData = new BoundData();
         BoundData mSecondaryBoundData = new BoundData();
+        BoundData mLeftBoundData = new BoundData(); // NovaTube round2
+        ControlButtonPresenterSelector.ControlButtonPresenter mLeftButtonPresenter; // NovaTube round2
         Presenter.ViewHolder mSelectedViewHolder;
         Object mSelectedItem;
         PlaybackControlsRow.PlayPauseAction mPlayPauseAction;
@@ -431,18 +435,19 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
             PlayerTweaksData tweaksData = PlayerTweaksData.instance(rootView.getContext());
             PlaybackTransportRowPresenter.this.mPlaybackControlsPresenter.setSharedFocusEnabled(tweaksData.isSyncRowButtonIndexEnabled());
             PlaybackTransportRowPresenter.this.mSecondaryControlsPresenter.setSharedFocusEnabled(tweaksData.isSyncRowButtonIndexEnabled());
+            PlaybackTransportRowPresenter.this.mLeftControlsPresenter.setSharedFocusEnabled(tweaksData.isSyncRowButtonIndexEnabled()); // NovaTube round2
             mImageView = (ImageView) rootView.findViewById(R.id.image);
             mDescriptionDock = (ViewGroup) rootView.findViewById(R.id.description_dock);
             mCurrentTime = (TextView) rootView.findViewById(R.id.current_time);
             mTotalTime = (TextView) rootView.findViewById(R.id.total_time);
-            mQualityInfo = (TextView) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.quality_info);
-            mDateTime = (TextView) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.date_time);
-            mEndingTime = (TextView) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.ending_time);
-            mEndingTimeFormat = rootView.getContext().getString(com.liskovsoft.smartyoutubetv2.tv.R.string.player_ending_time);
-            mRemainingTimeFormat = rootView.getContext().getString(com.liskovsoft.smartyoutubetv2.tv.R.string.player_remaining_time);
-            mAdditionalInfo = (ViewGroup) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.additional_info);
-            mTimeInfo = (ViewGroup) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.time_info);
-            mTopEdge = (ViewGroup) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.top_edge);
+            mQualityInfo = (TextView) rootView.findViewById(com.novatube.tv.R.id.quality_info);
+            mDateTime = (TextView) rootView.findViewById(com.novatube.tv.R.id.date_time);
+            mEndingTime = (TextView) rootView.findViewById(com.novatube.tv.R.id.ending_time);
+            mEndingTimeFormat = rootView.getContext().getString(com.novatube.tv.R.string.player_ending_time);
+            mRemainingTimeFormat = rootView.getContext().getString(com.novatube.tv.R.string.player_remaining_time);
+            mAdditionalInfo = (ViewGroup) rootView.findViewById(com.novatube.tv.R.id.additional_info);
+            mTimeInfo = (ViewGroup) rootView.findViewById(com.novatube.tv.R.id.time_info);
+            mTopEdge = (ViewGroup) rootView.findViewById(com.novatube.tv.R.id.top_edge);
             mTopEdge.setOnFocusChangeListener((v, hasFocus) -> {
                 if (hasFocus) {
                     mTopEdge.clearFocus();
@@ -554,14 +559,23 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
             mControlsDock = (ViewGroup) rootView.findViewById(R.id.controls_dock);
             mSecondaryControlsDock =
                     (ViewGroup) rootView.findViewById(R.id.secondary_controls_dock);
+            // NovaTube round2: left cluster (channel / Description / Subscribe), icon + text label
+            mLeftControlsDock =
+                    (ViewGroup) rootView.findViewById(com.novatube.tv.R.id.left_controls_dock);
+            if (mLeftControlsDock != null) {
+                mLeftButtonPresenter = ControlButtonPresenterSelector.createButtonPresenter(
+                        com.novatube.tv.R.layout.nt_control_button_left,
+                        ControlButtonPresenterSelector.MODE_LABELED,
+                        PlayerData.instance(rootView.getContext()).isTooltipsEnabled());
+            }
             mDescriptionViewHolder = descriptionPresenter == null ? null :
                     descriptionPresenter.onCreateViewHolder(mDescriptionDock);
             if (mDescriptionViewHolder != null) {
                 mDescriptionDock.addView(mDescriptionViewHolder.view);
             }
             mThumbsBar = (ThumbsBar) rootView.findViewById(R.id.thumbs_row);
-            mThumbsBarTitle = (TextView) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.thumbs_row_title);
-            mThumbsBarWrapper = (ViewGroup) rootView.findViewById(com.liskovsoft.smartyoutubetv2.tv.R.id.thumbs_row_wrapper);
+            mThumbsBarTitle = (TextView) rootView.findViewById(com.novatube.tv.R.id.thumbs_row_title);
+            mThumbsBarWrapper = (ViewGroup) rootView.findViewById(com.novatube.tv.R.id.thumbs_row_wrapper);
         }
 
         /**
@@ -629,6 +643,10 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
                 case CONTROLS_MODE_FULL:
                     mControlsVh.view.setVisibility(View.VISIBLE);
                     mSecondaryControlsVh.view.setVisibility(View.VISIBLE);
+                    // NovaTube round2
+                    if (mLeftControlsVh != null) {
+                        mLeftControlsVh.view.setVisibility(View.VISIBLE);
+                    }
                     mDescriptionViewHolder.view.setVisibility(View.VISIBLE);
                     mAdditionalInfo.setVisibility(View.VISIBLE);
                     //mTimeInfo.setVisibility(View.VISIBLE);
@@ -641,6 +659,10 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
                     mControlsVh.view.setVisibility(View.GONE);
                     // MOD: use GONE to move previews closer to seek bar
                     mSecondaryControlsVh.view.setVisibility(View.GONE);
+                    // NovaTube round2
+                    if (mLeftControlsVh != null) {
+                        mLeftControlsVh.view.setVisibility(View.GONE);
+                    }
                     mDescriptionViewHolder.view.setVisibility(View.GONE);
                     mAdditionalInfo.setVisibility(View.GONE);
                     //mTimeInfo.setVisibility(View.GONE);
@@ -676,9 +698,39 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
             if (adapter.getPresenterSelector() instanceof ControlButtonPresenterSelector) {
                 ControlButtonPresenterSelector selector =
                         (ControlButtonPresenterSelector) adapter.getPresenterSelector();
+                // NovaTube round2: keep pill segments aligned with the visible
+                // like/dislike/comment/save buttons (in display order)
+                selector.setPillOrder(collectPillActionIds(adapter));
                 return selector.getSecondaryPresenter();
             }
             return adapter.getPresenter(adapter.size() > 0 ? adapter.get(0) : null);
+        }
+
+        /**
+         * NovaTube round2: ids of the pill buttons present in the given adapter,
+         * in display order.
+         */
+        private java.util.List<Integer> collectPillActionIds(ObjectAdapter adapter) {
+            java.util.List<Integer> ids = new java.util.ArrayList<>();
+            int[] pillIds = {
+                    com.novatube.tv.R.id.action_thumbs_up,
+                    com.novatube.tv.R.id.action_thumbs_down,
+                    com.novatube.tv.R.id.action_comment,
+                    com.novatube.tv.R.id.action_playlist_add
+            };
+            for (int i = 0; i < adapter.size(); i++) {
+                Object item = adapter.get(i);
+                if (item instanceof Action) {
+                    int id = (int) ((Action) item).getId();
+                    for (int pillId : pillIds) {
+                        if (id == pillId) {
+                            ids.add(id);
+                            break;
+                        }
+                    }
+                }
+            }
+            return ids;
         }
 
         /**
@@ -868,6 +920,8 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
     Presenter mDescriptionPresenter;
     final ControlBarPresenter mPlaybackControlsPresenter;
     final ControlBarPresenter mSecondaryControlsPresenter;
+    final ControlBarPresenter mLeftControlsPresenter; // NovaTube round2: left cluster
+    ObjectAdapter mLeftActionsAdapter; // NovaTube round2: set by VideoPlayerGlue
     OnActionClickedListener mOnActionClickedListener;
     OnActionLongClickedListener mOnActionLongClickedListener;
 
@@ -918,12 +972,16 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         setHeaderPresenter(null);
         setSelectEffectEnabled(false);
 
-        mPlaybackControlsPresenter = new ControlBarPresenter(com.liskovsoft.smartyoutubetv2.tv.R.layout.lb_control_bar);
+        mPlaybackControlsPresenter = new ControlBarPresenter(com.novatube.tv.R.layout.lb_control_bar);
         mPlaybackControlsPresenter.setDefaultFocusToMiddle(false);
         mPlaybackControlsPresenter.setFocusRecovery(true);
-        mSecondaryControlsPresenter = new ControlBarPresenter(com.liskovsoft.smartyoutubetv2.tv.R.layout.lb_control_bar);
+        mSecondaryControlsPresenter = new ControlBarPresenter(com.novatube.tv.R.layout.lb_control_bar);
         mSecondaryControlsPresenter.setDefaultFocusToMiddle(false);
         mSecondaryControlsPresenter.setFocusRecovery(true);
+        // NovaTube round2: left cluster (channel / Description / Subscribe)
+        mLeftControlsPresenter = new ControlBarPresenter(com.novatube.tv.R.layout.lb_control_bar);
+        mLeftControlsPresenter.setDefaultFocusToMiddle(false);
+        mLeftControlsPresenter.setFocusRecovery(true);
 
         mPlaybackControlsPresenter.setOnControlSelectedListener(mOnControlSelectedListener);
         mSecondaryControlsPresenter.setOnControlSelectedListener(mOnControlSelectedListener);
@@ -931,6 +989,18 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         mSecondaryControlsPresenter.setOnControlClickedListener(mOnControlClickedListener);
         mPlaybackControlsPresenter.setOnControlLongClickedListener(mOnControlLongClickedListener);
         mSecondaryControlsPresenter.setOnControlLongClickedListener(mOnControlLongClickedListener);
+        // NovaTube round2
+        mLeftControlsPresenter.setOnControlSelectedListener(mOnControlSelectedListener);
+        mLeftControlsPresenter.setOnControlClickedListener(mOnControlClickedListener);
+        mLeftControlsPresenter.setOnControlLongClickedListener(mOnControlLongClickedListener);
+    }
+
+    /**
+     * NovaTube round2: adapter for the left control cluster
+     * (channel / Description / Subscribe), provided by VideoPlayerGlue.
+     */
+    public void setLeftActionsAdapter(ObjectAdapter adapter) {
+        mLeftActionsAdapter = adapter;
     }
 
     /**
@@ -1038,7 +1108,7 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
     @Override
     protected RowPresenter.ViewHolder createRowViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext()).inflate(
-                com.liskovsoft.smartyoutubetv2.tv.R.layout.lb_playback_transport_controls_row, parent, false);
+                com.novatube.tv.R.layout.lb_playback_transport_controls_row, parent, false);
         ViewHolder vh = new ViewHolder(v, mDescriptionPresenter);
         initRow(vh);
         return vh;
@@ -1057,6 +1127,12 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         vh.mSecondaryControlsVh = (ControlBarPresenter.ViewHolder) mSecondaryControlsPresenter
                 .onCreateViewHolder(vh.mSecondaryControlsDock);
         vh.mSecondaryControlsDock.addView(vh.mSecondaryControlsVh.view);
+        // NovaTube round2: left cluster
+        if (vh.mLeftControlsDock != null) {
+            vh.mLeftControlsVh = (ControlBarPresenter.ViewHolder) mLeftControlsPresenter
+                    .onCreateViewHolder(vh.mLeftControlsDock);
+            vh.mLeftControlsDock.addView(vh.mLeftControlsVh.view);
+        }
         ((PlaybackTransportRowView) vh.view.findViewById(R.id.transport_row))
                 .setOnUnhandledKeyListener(new PlaybackTransportRowView.OnUnhandledKeyListener() {
                 @Override
@@ -1105,6 +1181,14 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         mSecondaryControlsPresenter.onBindViewHolder(vh.mSecondaryControlsVh,
                 vh.mSecondaryBoundData);
 
+        // NovaTube round2: left cluster (channel / Description / Subscribe)
+        if (vh.mLeftControlsVh != null && mLeftActionsAdapter != null && vh.mLeftButtonPresenter != null) {
+            vh.mLeftBoundData.adapter = mLeftActionsAdapter;
+            vh.mLeftBoundData.presenter = vh.mLeftButtonPresenter;
+            vh.mLeftBoundData.mRowViewHolder = vh;
+            mLeftControlsPresenter.onBindViewHolder(vh.mLeftControlsVh, vh.mLeftBoundData);
+        }
+
         vh.setTotalTime(row.getDuration());
         vh.setCurrentPosition(row.getCurrentPosition());
         vh.setBufferedPosition(row.getBufferedPosition());
@@ -1121,6 +1205,10 @@ public class PlaybackTransportRowPresenter extends PlaybackRowPresenter {
         }
         mPlaybackControlsPresenter.onUnbindViewHolder(vh.mControlsVh);
         mSecondaryControlsPresenter.onUnbindViewHolder(vh.mSecondaryControlsVh);
+        // NovaTube round2
+        if (vh.mLeftControlsVh != null) {
+            mLeftControlsPresenter.onUnbindViewHolder(vh.mLeftControlsVh);
+        }
         if (row != null) {
             row.setOnPlaybackProgressChangedListener(null);
         }

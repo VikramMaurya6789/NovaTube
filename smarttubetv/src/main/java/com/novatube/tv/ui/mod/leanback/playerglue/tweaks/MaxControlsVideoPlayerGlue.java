@@ -1,4 +1,4 @@
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks;
+package com.novatube.tv.ui.mod.leanback.playerglue.tweaks;
 
 import android.content.Context;
 import android.view.View;
@@ -10,13 +10,13 @@ import androidx.leanback.widget.PlaybackControlsRow;
 import androidx.leanback.widget.PlaybackRowPresenter;
 import androidx.leanback.widget.RowPresenter;
 import com.liskovsoft.sharedutils.helpers.Helpers;
-import com.liskovsoft.smartyoutubetv2.common.app.models.data.Video;
-import com.liskovsoft.smartyoutubetv2.common.app.models.playback.ui.SeekBarSegment;
-import com.liskovsoft.smartyoutubetv2.common.exoplayer.controller.PlayerView;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.framedrops.PlaybackBaseControlGlue;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.framedrops.PlaybackTransportControlGlue;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter.TopEdgeFocusListener;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter.ViewHolder;
+import com.novatube.common.app.models.data.Video;
+import com.novatube.common.app.models.playback.ui.SeekBarSegment;
+import com.novatube.common.exoplayer.controller.PlayerView;
+import com.novatube.tv.ui.mod.leanback.playerglue.framedrops.PlaybackBaseControlGlue;
+import com.novatube.tv.ui.mod.leanback.playerglue.framedrops.PlaybackTransportControlGlue;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter.TopEdgeFocusListener;
+import com.novatube.tv.ui.mod.leanback.playerglue.tweaks.PlaybackTransportRowPresenter.ViewHolder;
 
 import java.lang.ref.WeakReference;
 import java.util.List;

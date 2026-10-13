@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tweaks;
+package com.novatube.tv.ui.mod.leanback.playerglue.tweaks;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -22,7 +22,7 @@ import androidx.leanback.R;
 import androidx.leanback.widget.Action;
 import androidx.leanback.widget.ObjectAdapter;
 import androidx.leanback.widget.Presenter;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tooltips.ControlButtonPresenterSelector;
+import com.novatube.tv.ui.mod.leanback.playerglue.tooltips.ControlButtonPresenterSelector;
 
 /**
  * A presenter that assumes a LinearLayout container for a series

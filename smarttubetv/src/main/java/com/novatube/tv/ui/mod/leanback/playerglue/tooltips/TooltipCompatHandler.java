@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.playerglue.tooltips;
+package com.novatube.tv.ui.mod.leanback.playerglue.tooltips;
 
 import android.content.Context;
 import android.text.TextUtils;

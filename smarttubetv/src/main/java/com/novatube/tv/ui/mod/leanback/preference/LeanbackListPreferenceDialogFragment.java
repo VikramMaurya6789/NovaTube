@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.liskovsoft.smartyoutubetv2.tv.ui.mod.leanback.preference;
+package com.novatube.tv.ui.mod.leanback.preference;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -34,10 +34,10 @@ import androidx.preference.DialogPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.recyclerview.widget.RecyclerView;
-import com.liskovsoft.smartyoutubetv2.common.app.presenters.PlaybackPresenter;
-import com.liskovsoft.smartyoutubetv2.common.utils.Utils;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.clickable.LinkifyCompat;
-import com.liskovsoft.smartyoutubetv2.tv.ui.mod.clickable.LinkifyCompat.LinkifyClickHandler;
+import com.novatube.common.app.presenters.PlaybackPresenter;
+import com.novatube.common.utils.Utils;
+import com.novatube.tv.ui.mod.clickable.LinkifyCompat;
+import com.novatube.tv.ui.mod.clickable.LinkifyCompat.LinkifyClickHandler;
 
 import java.util.Collections;
 import java.util.HashSet;
